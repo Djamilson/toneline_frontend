@@ -32,7 +32,7 @@ export const Container = styled.div<Props>`
 
   background: ${colors.colorBackground01};
   border: 0;
-  z-index: 5;
+  z-index: 2;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.6);
   -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.6);
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.6);
@@ -46,8 +46,18 @@ export const Box = styled.div`
   width: 100%;
 
   span {
-    font-size: 16px;
-    color: ${colors.colorTitleInPrimary};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      font-size: 22;
+    }
+    strong {
+      margin-left: 15px;
+      font-size: 16px;
+      color: ${colors.colorTitleInPrimary};
+    }
   }
 `;
 

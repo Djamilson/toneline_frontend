@@ -25,21 +25,21 @@ const fadeIn = keyframes`
 export const Container = styled.div<Props>`
   position: fixed;
   transition: all 0.5s ease;
-  top: ${(props) => (props.visible ? '6vh' : '6.9vh')};
+  top: ${(props) => (props.visible ? '6.9vh' : '6.9vh')};
   right: 0;
   animation: ${(props) => props.visible && fadeIn} 500ms linear;
   width: 100%;
   padding: 0 3rem;
-  padding-top: ${(props) => (props.visible ? '1rem' : '1rem')};
-  padding-bottom: ${(props) => (props.visible ? '2rem' : '2rem')};
+  padding-top: ${(props) => (props.visible ? '0.5rem' : '1rem')};
+  padding-bottom: ${(props) => (props.visible ? '0rem' : '1rem')};
 
   background: ${colors.colorBackground03};
   border: 0;
   z-index: 5;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.6);
-  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.6);
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.6);
-  -o-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 8px 6px -6px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0px 8px 6px -6px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0px 8px 6px -6px rgba(0, 0, 0, 0.6);
+  -o-box-shadow: 0px 8px 6px -6px rgba(0, 0, 0, 0.6);
 `;
 export const Box = styled.div`
   display: flex;
@@ -113,8 +113,8 @@ export const Profile = styled.div`
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  border: 0;
   margin-left: 20px;
+  margin-top: -8px;
   div {
     text-align: right;
     margin-right: 10px;

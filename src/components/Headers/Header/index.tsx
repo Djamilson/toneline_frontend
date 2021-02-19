@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { FiPhoneCall } from 'react-icons/fi';
 
-import logoImg from '../../../assets/images/logo.svg';
+import whatsapp from '../../../assets/images/icons/whatsapp.svg';
 import {
   Container,
   Content,
@@ -36,10 +37,15 @@ const Header: React.FC = () => {
     <Container ref={headerRef} visible={sticky.isSticky}>
       <Content>
         <Box>
-          <span>Fonennn</span>
-          <strong>Fone,</strong>
-          <span>Mmjkjkfd</span>
-          <span>Mmjkjkfd</span>
+          <span>Locadora de Veículos</span>
+          <span>
+            <img src={whatsapp} alt="Proffy" />
+            <strong>(63) 3225-0471</strong>
+          </span>
+          <span>
+            <FiPhoneCall />
+            <strong>(63) 3225-0471</strong>
+          </span>
         </Box>
       </Content>
     </Container>

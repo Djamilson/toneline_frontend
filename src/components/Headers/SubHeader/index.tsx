@@ -1,6 +1,6 @@
 import React, { useState, useCallback, useRef, useEffect } from 'react';
 
-import logoImg from '../../../assets/images/logo.svg';
+import logoImg from '../../../assets/logo.png';
 import ButtonMenu from './MenuResponsive/ButtonMenu';
 import MenuResponsive from './MenuResponsive/Modal';
 import Navigation from './Navigation';
@@ -51,7 +51,7 @@ const Header: React.FC = () => {
       <Content>
         <Box>
           <NavLink to="/dashboard">
-            <img src={logoImg} alt="Proffy" />
+            <img src={logoImg} alt="Toneline" />
           </NavLink>
           <ButtonMenu handleClick={handleToggleMenu} isActive={modalOpen} />
           <Navigation menus={menus} />
@@ -60,7 +60,7 @@ const Header: React.FC = () => {
           <ProfileLink to="/profile">
             <div>
               <strong>Bem-vindo,</strong>
-              <span>Mmjkjkfd</span>
+              <span>Visitante</span>
             </div>
           </ProfileLink>
         </Profile>

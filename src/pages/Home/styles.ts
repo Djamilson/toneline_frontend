@@ -6,6 +6,7 @@ import styled, { keyframes } from 'styled-components';
 import signInBackgroundImg from '../../assets/banner.jpg';
 import backgroundImg02 from '../../assets/p7tai9P7H.jpg';
 import backgroundUnsplash from '../../assets/unsplash.jpg';
+import Tooltips from '../../components/Tooltip';
 import { colors } from '../../styles';
 
 export const Container = styled.div`
@@ -26,18 +27,40 @@ const appearImageLeft = keyframes`
   from{
     opacity:0;
     transform: translateX(50px);
+     -webkit-animation-timing-function: ease-out;
   }
   to{
     opacity:1;
     transform: translateX(0px)
+    -webkit-animation-timing-function: ease-in;
   }
 `;
+
+const appearImageRigth = keyframes`
+
+  from{
+    opacity:0;
+    transform: translateX(50px);
+     -webkit-animation-timing-function: ease-out;
+
+      transform: translateX(-100%);
+  transition: right 1s, transform 1s;
+  }
+  to{
+    opacity:1;
+    transform: translateX(0px)
+    -webkit-animation-timing-function: ease-in;
+    right: 0%;
+  transform: translateX(0%);
+  }
+`;
+
 interface IProps {
   isSticky: boolean;
 }
 export const Background = styled.div<IProps>`
   position: fixed;
-  top: 20vh;
+  top: ${(props) => (props.isSticky ? `12.8vh` : `19.3vh`)};
   right: 0;
   display: block;
   justify-content: center;
@@ -45,10 +68,10 @@ export const Background = styled.div<IProps>`
   width: 100%;
   background: ${colors.colorPrimary};
   height: 82vh;
-  //margin-top: 39rem;
   border: 0;
   min-width: 380px;
-  animation: ${appearImageLeft} 1s;
+  animation: ${appearImageLeft};
+  transition-duration: 2.2s;
 
   background: ${(props) =>
     props.isSticky
@@ -203,7 +226,7 @@ export const Box = styled.div`
 `;
 
 export const BoxCard = styled.div`
-  z-index: 5;
+  z-index: 1;
   background: ${colors.colorBackground02};
   display: flex;
   justify-content: center;
@@ -243,7 +266,7 @@ export const BoxCard = styled.div`
 `;
 
 export const BoxCard101 = styled.div`
-  z-index: 5;
+  z-index: 1;
   background: none;
   display: flex;
   justify-content: flex-start;
@@ -283,7 +306,7 @@ export const BoxCard101 = styled.div`
 `;
 
 export const Gallery = styled.div`
-  z-index: 5;
+  z-index: 1;
   background: ${colors.colorBackground02};
   display: flex;
   justify-content: center;
@@ -350,7 +373,7 @@ export const Gallery = styled.div`
 `;
 
 export const BoxCardImage = styled.div`
-  z-index: 5;
+  z-index: 1;
   background: ${colors.colorBackground04};
 
   display: flex;
@@ -400,9 +423,69 @@ export const BoxCardImage = styled.div`
     }
   }
 `;
+interface IPropsOffset {
+  offset: number;
+}
+export const BoxCardImage11 = styled.div<IPropsOffset>`
+  z-index: 1;
+  background: ${colors.colorBackground04};
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 90vh;
+  top: 0;
+  right: 0;
+  margin-top: 60vh;
+
+  section {
+    //animation: ${appearImageRigth} 1s;
+    background: url(${backgroundUnsplash}) no-repeat center;
+    background-size: 100% auto;
+    height: 90vh;
+    flex-grow: 1;
+    align-content: flex-start;
+    justify-content: space-around;
+    flex-direction: column;
+
+    animation: appearImageLeft 12s linear infinite;
+    transform: translateY(4em) rotateZ(-5deg);
+    transition: transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1),
+      opacity 0.3s 0.25s ease-out;
+    will-change: transform, opacity;
+  }
+
+  article {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    width: 40%;
+    margin: 4rem;
+    h2 {
+      font-size: 30px;
+      font-weight: bold;
+      color: ${colors.colorTitleInPrimary};
+      margin-bottom: 5rem;
+    }
+
+    span {
+      font-size: 23px;
+      font-weight: bold;
+      color: ${colors.colorTextTitle};
+    }
+    p {
+      margin-top: 1rem;
+      font-size: 18px;
+      font-weight: normal;
+      color: ${colors.colorTitleInPrimary};
+    }
+  }
+`;
 
 export const BoxCard02 = styled.div`
-  z-index: 5;
+  z-index: 1;
   background: ${colors.colorBackground04};
   display: flex;
   justify-content: center;
@@ -442,7 +525,7 @@ export const BoxCard02 = styled.div`
 `;
 
 export const BoxCard03 = styled.div`
-  z-index: 5;
+  z-index: 1;
   background: ${colors.colorBackground04};
   display: flex;
   justify-content: center;
@@ -502,6 +585,7 @@ export const BoxCard03 = styled.div`
   }
 
   footer {
+    z-index: 1;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -750,5 +834,25 @@ export const LinkGiveClasses = styled(Link)`
     color: ${colors.colorButtonText};
 
     background: ${shade(0.2, `${colors.colorSecundaryDark}`)};
+  }
+`;
+
+export const Tooltip = styled(Tooltips)`
+  z-index: 999;
+  height: 20px;
+  margin-left: 0px;
+
+  svg {
+    margin: 0px;
+  }
+
+  span {
+    background: ${colors.fourth};
+    color: ${colors.sixth};
+
+    &::before {
+      z-index: 100;
+      border-color: ${colors.fourth} transparent;
+    }
   }
 `;

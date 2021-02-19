@@ -5,6 +5,8 @@ import AppProvider from './hooks';
 import Routes from './routes';
 import GlobalStyled from './styles/global';
 
+import 'leaflet/dist/leaflet.css';
+
 const App: React.FC = () => (
   <Router>
     <AppProvider>

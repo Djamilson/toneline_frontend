@@ -1,8 +1,10 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { IconBaseProps } from 'react-icons';
+import { FiAlertCircle } from 'react-icons/fi';
+import { FiPlus } from 'react-icons/fi';
 import { MdAccessible } from 'react-icons/md';
+import { Marker } from 'react-leaflet';
 
-import landingImg from '../../assets/images/landing.svg';
-import logoImg from '../../assets/images/logo.svg';
 import logoCurso from '../../assets/images/logo.svg';
 import img_0_0_30 from '../../assets/img_0_0_30.jpg';
 import N9Pf2J656aQ from '../../assets/N9Pf2J656aQ.jpg';
@@ -10,21 +12,18 @@ import ovrOPhu8vSw from '../../assets/ovrOPhu8vSw.jpg';
 import splash from '../../assets/splash.png';
 import SubHeader from '../../components/Headers/Header';
 import Header from '../../components/Headers/SubHeader';
+import { colors } from '../../styles';
 import {
   Container,
   Background,
-  Background02,
+  BoxCardImage11,
   BoxCard,
   Gallery,
   BoxCard02,
   BoxCard03,
   BoxCard101,
   BoxCardImage,
-  Box,
-  ContainerLogo,
-  Footer,
-  LinkStudy,
-  LinkGiveClasses,
+  Tooltip,
 } from './styles';
 
 const Home: React.FC = () => {
@@ -39,12 +38,12 @@ const Home: React.FC = () => {
         setSticky({ isSticky: false, offset: 0 });
       }
     };
-
+    console.log('==:window.pageYOffset', sticky.offset);
     window.addEventListener('scroll', handleScrollEvent);
     return () => {
       window.removeEventListener('scroll', handleScrollEvent);
     };
-  }, [setSticky]);
+  }, [setSticky, sticky.offset]);
   return (
     <Container>
       <Header />
@@ -149,14 +148,6 @@ const Home: React.FC = () => {
         </div>
       </Gallery>
 
-      <Background02>
-        <div>
-          <section>
-            <span>Sua plataforma de estudos online</span>
-          </section>
-        </div>
-      </Background02>
-
       <BoxCard>
         <div>
           <MdAccessible />
@@ -180,7 +171,7 @@ const Home: React.FC = () => {
         </div>
       </BoxCard>
 
-      <BoxCardImage>
+      <BoxCardImage11 offset={sticky.offset}>
         <section>
           <img src={logoCurso} alt="Proffy" />
           <span>Locadora de Veículo neline</span>
@@ -204,7 +195,7 @@ const Home: React.FC = () => {
             SENSIN system.
           </p>
         </article>
-      </BoxCardImage>
+      </BoxCardImage11>
 
       <BoxCard>
         <div>
@@ -236,6 +227,11 @@ const Home: React.FC = () => {
           <p>JKHKJHjhkjh kjhkj hkj hkjhkjhkjhk kjhkjhk hkjhKJHkj hkjh</p>
         </div>
       </BoxCard101>
+      <Gallery>
+        <Tooltip title="TESTESET">
+          <FiAlertCircle color={colors.colorBackground01} size={20} />
+        </Tooltip>
+      </Gallery>
 
       <BoxCard03>
         <section>
