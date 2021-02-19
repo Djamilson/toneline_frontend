@@ -18,6 +18,7 @@ import {
   Gallery,
   BoxCard02,
   BoxCard03,
+  BoxCard101,
   BoxCardImage,
   Box,
   ContainerLogo,
@@ -227,6 +228,14 @@ const Home: React.FC = () => {
           <p>JKHKJHjhkjh kjhkj hkj hkjhkjhkjhk kjhkjhk hkjhKJHkj hkjh</p>
         </div>
       </BoxCard>
+
+      <BoxCard101>
+        <div>
+          <MdAccessible />
+          <span>Testestg</span>
+          <p>JKHKJHjhkjh kjhkj hkj hkjhkjhkjhk kjhkjhk hkjhKJHkj hkjh</p>
+        </div>
+      </BoxCard101>
 
       <BoxCard03>
         <section>

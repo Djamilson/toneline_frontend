@@ -242,6 +242,46 @@ export const BoxCard = styled.div`
   }
 `;
 
+export const BoxCard101 = styled.div`
+  z-index: 5;
+  background: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 70%;
+  height: 140vh;
+  top: 0;
+  right: 0;
+  margin-top: 10vh;
+  padding: 5rem 10rem;
+  div {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid ${colors.colorTextInWhite};
+    flex-grow: 1;
+    align-content: flex-start;
+    justify-content: space-around;
+    width: 50%;
+    height: 70vh;
+    border-radius: 7px;
+    flex-direction: column;
+    margin: 1rem;
+    -webkit-box-shadow: 0px 2px 7px 2px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 2px 7px 2px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 2px 7px 2px rgba(0, 0, 0, 0.4);
+    span {
+      font-size: 18px;
+      font-weight: bold;
+      color: ${colors.colorTextBase};
+    }
+    p {
+      margin-top: 1rem;
+      font-size: 14px;
+      font-weight: normal;
+      color: ${colors.colorTextBase};
+    }
+  }
+`;
+
 export const Gallery = styled.div`
   z-index: 5;
   background: ${colors.colorBackground02};
@@ -411,7 +451,7 @@ export const BoxCard03 = styled.div`
   width: 100%;
   height: 110vh;
   top: 0;
-  margin-top: 60vh;
+  margin-top: 30vh;
 
   section {
     width: 100%;
