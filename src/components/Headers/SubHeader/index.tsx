@@ -16,6 +16,7 @@ import {
 const Header: React.FC = () => {
   const menus = [
     { label: 'Home', path: '/', selected: true },
+    { label: 'Contato', path: '/Contato', selected: false },
     { label: 'Sobre', path: '/about', selected: false },
   ];
 
