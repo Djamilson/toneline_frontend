@@ -15,7 +15,7 @@ export const InputBlock = styled.div`
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  margin: 0 10px 0px 10px;
+  margin: 0;
 
   width: 100%;
 
@@ -24,10 +24,10 @@ export const InputBlock = styled.div`
   }
 
   label {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: ${colors.colorTextcomplement};
     margin-bottom: 0.2rem;
-    font-weight: bold;
+    font-weight: normal;
   }
 `;
 
@@ -70,8 +70,8 @@ export const Container = styled.div<ContainerProps>`
     flex: 1;
     border: 0;
     font-size: 0.9rem;
-    height: 8rem;
-    min-height: 8rem;
+    height: 6.5rem;
+    min-height: 6rem;
     resize: vertical;
     color: ${colors.colorTextTitle};
     transition: background-color 5000s ease-in-out 0s;

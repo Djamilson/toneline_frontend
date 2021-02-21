@@ -11,8 +11,10 @@ const Background: React.FC<IProps> = ({ isSticky }) => {
     <Container isSticky={isSticky}>
       <div>
         <section>
-          <img src={logoCurso} alt="Proffy" />
-          <span>Sua locadora de veículos</span>
+          <h1>Estamos te aguardando!</h1>
+          <span>
+            Sua <strong>locadora</strong> de veículos
+          </span>
         </section>
       </div>
     </Container>

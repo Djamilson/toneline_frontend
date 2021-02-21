@@ -1,6 +1,7 @@
 import React, { useCallback, useRef } from 'react';
-import { FaPhoneAlt } from 'react-icons/fa';
+import { FaDonate, FaPhoneAlt, FaRegCreditCard } from 'react-icons/fa';
 import { FiCheck, FiMail, FiUser } from 'react-icons/fi';
+import { MdAccessible, MdDirectionsCar, MdStarHalf } from 'react-icons/md';
 
 import { FormHandles } from '@unform/core';
 import { format } from 'date-fns';
@@ -8,18 +9,15 @@ import ptBR from 'date-fns/locale/pt-BR';
 import { GoogleSpreadsheet } from 'google-spreadsheet';
 import * as Yup from 'yup';
 
-import { Form } from '../../_layouts/auth/styles';
-import { Header, GroupButton } from '../../_layouts/auth/styles';
-import creds from '../../../../formulario-reactjs-pesquisas-2b5b48eb052a.json';
+import designRemovebg from '../../../assets/design-removebg-preview.png';
 import { useLoading } from '../../../hooks/loading';
 import { useToast } from '../../../hooks/toast';
 import getValidationErros from '../../../utils/getValidationErros';
 import * as masks from '../../../utils/masks';
 import { schemaValidationPhone } from '../../../utils/schema';
-import Button from '../../Button';
-import Input from '../../Form/Input';
+import Input from '../../Form/Input02';
 import InputTextArea from '../../Form/InputTextArea';
-import { Container } from './styles';
+import { Container, Form, Button, Content } from './styles';
 
 interface FormData {
   name: string;
@@ -131,21 +129,8 @@ const SectionForm: React.FC = () => {
   return (
     <Container>
       <Form ref={formRef} onSubmit={handleSubmit}>
-        <Header>
-          <h2>Contato!</h2>
-
-          <GroupButton>
-            <Button type="submit">
-              <span>
-                <FiCheck />
-              </span>
-              <strong>Salvar</strong>
-            </Button>
-          </GroupButton>
-        </Header>
-
         <fieldset>
-          <legend>Mensagem</legend>
+          <legend>Contato!</legend>
           <Input placeholder="Nome" name="name" icon={FiUser} label="Nome" />
           <Input
             placeholder="E-mail"
@@ -168,7 +153,24 @@ const SectionForm: React.FC = () => {
             placeholder="Escreva aqui!"
           />
         </fieldset>
+
+        <Button type="submit">
+          <span>
+            <FiCheck />
+          </span>
+          <strong>Enviar</strong>
+        </Button>
       </Form>
+      <Content>
+        <section>
+          <span>14 DAYS</span>
+          <span>RETURN</span>
+          <p>
+            We provide a 14-day test drive, to see if your car truly fits into
+            your life. If it doesn’t, simply return it.
+          </p>
+        </section>
+      </Content>
     </Container>
   );
 };

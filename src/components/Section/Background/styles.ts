@@ -55,7 +55,8 @@ export const Container = styled.div<IProps>`
     justify-content: center;
     align-items: center;
 
-    //filter: blur(1.5px) brightness(0.9);
+    margin-left: 20rem;
+    margin-top: -7rem;
 
     @media (min-width: 1024px) {
       min-width: 45vw;
@@ -67,15 +68,23 @@ export const Container = styled.div<IProps>`
       justify-content: center;
       align-items: center;
 
-      img {
-        width: 10rem;
-        height: auto;
+      h1 {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 42px;
+        font-weight: bold;
       }
+
       > span {
         font-weight: 500;
-        font-size: 1.3rem;
+        font-size: 3.3rem;
         line-height: 4.6rem;
         margin-top: 0.8rem;
+
+        strong {
+          font-weight: bold;
+          font-size: 4rem;
+          color: ${colors.colorBackground01};
+        }
 
         @media (min-width: 1100px) {
           text-align: initial;
