@@ -25,7 +25,7 @@ const fadeIn = keyframes`
 export const Container = styled.div<Props>`
   position: fixed;
   transition: all 0.5s ease;
-  top: ${(props) => (props.visible ? '6.9vh' : '6.9vh')};
+  top: ${(props) => (props.visible ? '6vh' : '6vh')};
   right: 0;
   animation: ${(props) => props.visible && fadeIn} 500ms linear;
   width: 100%;
