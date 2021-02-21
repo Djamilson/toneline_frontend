@@ -19,7 +19,7 @@ const Route: React.FC<RouteProps> = ({ component: Component, ...rest }) => {
   };
 
   const initGa = useCallback((history) => {
-    GoogleAnalytics.initialize('G-WR9M2RFQ3Y', {
+    GoogleAnalytics.initialize('G-RX43T90YH9', {
       debug: true,
     });
     trackPageView(history.location);

@@ -22,7 +22,7 @@ interface IProps {
 }
 export const Container = styled.div<IProps>`
   position: fixed;
-  top: ${(props) => (props.isSticky ? `12.8vh` : `19.3vh`)};
+  top: ${(props) => (props.isSticky ? `12vh` : `18.3vh`)};
   right: 0;
   display: block;
   justify-content: center;
