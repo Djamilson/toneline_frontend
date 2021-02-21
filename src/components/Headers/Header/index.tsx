@@ -2,14 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { FiPhoneCall } from 'react-icons/fi';
 
 import whatsapp from '../../../assets/images/icons/whatsapp.svg';
-import {
-  Container,
-  Content,
-  NavLink,
-  Profile,
-  ProfileLink,
-  Box,
-} from './styles';
+import { Container, Content, Box } from './styles';
 
 const Header: React.FC = () => {
   const [sticky, setSticky] = useState({ isSticky: false, offset: 0 });

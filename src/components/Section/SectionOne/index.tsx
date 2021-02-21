@@ -1,12 +1,6 @@
 import React from 'react';
 import { FaDonate, FaRegCreditCard } from 'react-icons/fa';
-import {
-  MdAccessible,
-  MdDirectionsCar,
-  MdDriveEta,
-  MdEventSeat,
-  MdStarHalf,
-} from 'react-icons/md';
+import { MdAccessible, MdDirectionsCar, MdStarHalf } from 'react-icons/md';
 
 import { Container } from './styles';
 

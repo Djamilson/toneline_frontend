@@ -1,6 +1,5 @@
 import React from 'react';
 
-import logoCurso from '../../../assets/images/logo.svg';
 import { Container } from './styles';
 
 interface IProps {
