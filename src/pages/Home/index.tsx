@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { IconBaseProps } from 'react-icons';
 import { FiAlertCircle } from 'react-icons/fi';
-import { FiPlus } from 'react-icons/fi';
 import { MdAccessible } from 'react-icons/md';
-import { Marker } from 'react-leaflet';
 
 import logoCurso from '../../assets/images/logo.svg';
 import SubHeader from '../../components/Headers/Header';

@@ -110,7 +110,6 @@ export const Content = styled.div`
   }
 `;
 
-export const Arrow = styled.div``;
 export const Line = styled.div`
   margin-top: 0px;
   margin-right: 1rem;

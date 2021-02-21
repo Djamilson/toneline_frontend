@@ -1,7 +1,6 @@
 import React, { useCallback, useRef } from 'react';
-import { FaDonate, FaPhoneAlt, FaRegCreditCard } from 'react-icons/fa';
+import { FaPhoneAlt } from 'react-icons/fa';
 import { FiCheck, FiMail, FiUser } from 'react-icons/fi';
-import { MdAccessible, MdDirectionsCar, MdStarHalf } from 'react-icons/md';
 
 import { FormHandles } from '@unform/core';
 import { format } from 'date-fns';
@@ -9,7 +8,6 @@ import ptBR from 'date-fns/locale/pt-BR';
 import { GoogleSpreadsheet } from 'google-spreadsheet';
 import * as Yup from 'yup';
 
-import designRemovebg from '../../../assets/design-removebg-preview.png';
 import { useLoading } from '../../../hooks/loading';
 import { useToast } from '../../../hooks/toast';
 import getValidationErros from '../../../utils/getValidationErros';
@@ -23,7 +21,6 @@ import {
   Button,
   Content,
   Point,
-  Arrow,
   Line,
   ArrowType,
 } from './styles';

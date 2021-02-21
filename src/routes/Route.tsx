@@ -18,16 +18,18 @@ const Route: React.FC<RouteProps> = ({ component: Component, ...rest }) => {
     GoogleAnalytics.pageview(location.pathname);
   };
 
-  const initGa = (history) => {
+  const initGa = useCallback((history) => {
     GoogleAnalytics.initialize('G-WR9M2RFQ3Y', {
       debug: true,
     });
     trackPageView(history.location);
     history.listen(trackPageView);
-  };
-  const history = useHistory();
+  }, []);
 
-  initGa(history);
+  const history = useHistory();
+  useEffect(() => {
+    initGa(history);
+  }, [history, initGa]);
 
   return (
     <ReactDOMRoute

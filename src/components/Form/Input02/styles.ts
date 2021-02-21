@@ -9,19 +9,6 @@ interface ContainerProps {
   isErrored: boolean;
 }
 
-export const InputBlock = styled.div`
-  position: relative;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-direction: column;
-  margin: 0 10px 0px 10px;
-
-  && {
-    margin-top: 1.4rem;
-  }
-`;
-
 export const Container = styled.div<ContainerProps>`
   border-radius: 7px;
   border: 1px solid ${colors.colorLineInWhite};

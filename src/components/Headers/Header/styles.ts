@@ -9,19 +9,6 @@ interface Props {
   visible: boolean;
 }
 
-const fadeIn = keyframes`
-  0% {
-    opacity: 0;
-    background: ${colors.colorPrimary};
-      transform: translateY(-142px);
-     }
-  100% {
-    opacity: 1;
-    background: ${colors.colorBoxBase};
-    transform: translateY(0px);
-  }
-`;
-
 export const Container = styled.div<Props>`
   position: fixed;
   transition: all 0.5s ease;
