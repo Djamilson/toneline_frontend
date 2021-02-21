@@ -27,12 +27,10 @@ export const Container = styled.div<ContainerProps>`
   border: 1px solid ${colors.colorLineInWhite};
   padding: 0;
   width: 100%;
-  padding-bottom: 10px;
-
+  padding-bottom: 7.8px;
   background: ${colors.colorInputBackground};
 
   color: #666360;
-
   align-items: center;
 
   & + div {
@@ -51,7 +49,7 @@ export const Container = styled.div<ContainerProps>`
     css`
       border-color: ${colors.fourth};
       margin-top: -10px;
-      height: 40px;
+      height: 41px;
     `}
 
   ${(props) =>
@@ -98,7 +96,7 @@ export const Container = styled.div<ContainerProps>`
         box-shadow: none;
         outline: none;
         border-color: ${colors.colorBackground01};
-        transform: translateY(-4.2em) scale(0.9);
+        transform: translateY(-4.3em) scale(0.8);
         margin-left: 0em;
       }
     }
@@ -113,13 +111,13 @@ export const Container = styled.div<ContainerProps>`
     ${(props) =>
       props.isErrored &&
       css`
-        margin-top: -3.5rem;
+        margin-top: -3.3rem;
       `}
   }
 
   label {
     display: block;
-    margin-top: 7px;
+    margin-top: 10px;
     margin-left: 4em;
     font-size: 1em;
     color: #aaa;
@@ -129,15 +127,11 @@ export const Container = styled.div<ContainerProps>`
 
     transform-origin: 0 0;
     transition: all 0.3s;
-    &:focus-within {
-      transform: scale(1.05, 1.05);
-    }
 
     ${(props) =>
       props.isErrored &&
       css`
-        //padding: 3.5rem;
-        margin-top: 0.5rem;
+        margin-top: 0.4rem;
       `}
   }
 
@@ -146,13 +140,13 @@ export const Container = styled.div<ContainerProps>`
     box-shadow: none;
     outline: none;
     border-color: ${colors.colorBackground01};
-    transform: translateY(-4.2em) scale(0.9);
+    transform: translateY(-4.3em) scale(0.8);
     margin-left: 0em;
 
     ${(props) =>
       props.isErrored &&
       css`
-        transform: translateY(-4.5em) scale(0.9);
+        transform: translateY(-4.4em) scale(0.8);
       `}
   }
 `;

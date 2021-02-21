@@ -30,7 +30,7 @@ export const Form = styled(Unform)`
   flex-direction: column;
   background: ${colors.colorBoxBase};
   border: 1px solid ${colors.colorBackground01};
-  border-radius: 8px;
+  //border-radius: 8px;
   -webkit-box-shadow: 2px 2px 7px 2px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 2px 2px 7px 2px rgba(0, 0, 0, 0.4);
   box-shadow: 2px 2px 7px 2px rgba(0, 0, 0, 0.4);
@@ -40,16 +40,20 @@ export const Form = styled(Unform)`
     border: 0;
     padding: 0rem;
     padding-bottom: 20px;
+    margin-top: -3rem;
+    width: 100%;
+
+    float: left;
 
     legend {
       font: 700 1rem Poppins;
-      color: ${colors.colorTextTitle};
+      color: ${colors.colorTitleInPrimary};
       margin-bottom: 3rem;
+      margin-right: 4rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
       width: 100%;
-      border-bottom: 1px solid ${colors.colorLineInWhite};
     }
   }
 `;
@@ -75,7 +79,7 @@ export const Content = styled.div`
   right: 0;
 
   padding-left: 5rem;
-  border-radius: 8px;
+  //border-radius: 8px;
 
   section {
     background: url(${backgroundUnsplash}) no-repeat center;
@@ -95,7 +99,8 @@ export const Content = styled.div`
       margin-top: 50px;
     }
     p {
-      margin-top: 7rem;
+      margin-top: 4rem;
+      margin-right: 150px;
       font-size: 16px;
       font-weight: normal;
       color: ${colors.colorTitleInPrimary};
@@ -103,4 +108,44 @@ export const Content = styled.div`
       letter-spacing: 2px;
     }
   }
+`;
+
+export const Arrow = styled.div``;
+export const Line = styled.div`
+  margin-top: 0px;
+  margin-right: 1rem;
+  width: 240px;
+
+  min-width: 200px;
+  max-width: 240px;
+  background: ${colors.colorBackground01};
+  height: 40px;
+  float: left;
+
+  border-radius: 0;
+
+  -webkit-box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.4);
+  transition: all 0.2s ease-in-out;
+`;
+export const Point = styled.div`
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 17px solid ${colors.colorBackground01};
+  display: block;
+  float: right;
+  margin-top: -2.5rem;
+`;
+
+export const ArrowType = styled.div`
+  top: 0;
+  margin-top: 0px;
+  border: 0;
+  margin-right: 17rem;
+  margin-bottom: 1rem;
+  float: right;
+  margin-top: -0.5rem;
 `;

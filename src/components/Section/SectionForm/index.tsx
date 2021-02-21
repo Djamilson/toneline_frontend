@@ -17,7 +17,16 @@ import * as masks from '../../../utils/masks';
 import { schemaValidationPhone } from '../../../utils/schema';
 import Input from '../../Form/Input02';
 import InputTextArea from '../../Form/InputTextArea';
-import { Container, Form, Button, Content } from './styles';
+import {
+  Container,
+  Form,
+  Button,
+  Content,
+  Point,
+  Arrow,
+  Line,
+  ArrowType,
+} from './styles';
 
 interface FormData {
   name: string;
@@ -129,8 +138,13 @@ const SectionForm: React.FC = () => {
   return (
     <Container>
       <Form ref={formRef} onSubmit={handleSubmit}>
+        <ArrowType>
+          <Line />
+          <Point />
+        </ArrowType>
         <fieldset>
           <legend>Contato!</legend>
+
           <Input placeholder="Nome" name="name" icon={FiUser} label="Nome" />
           <Input
             placeholder="E-mail"
