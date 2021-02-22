@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 import { shade } from 'polished';
 import styled, { keyframes } from 'styled-components';
 
-import signInBackgroundImg from '../../assets/banner.jpg';
-import backgroundImg02 from '../../assets/p7tai9P7H.jpg';
-import backgroundUnsplash from '../../assets/unsplash.jpg';
-import Tooltips from '../../components/Tooltip';
-import { colors } from '../../styles';
+import signInBackgroundImg from '../../../assets/banner.jpg';
+import backgroundImg02 from '../../../assets/p7tai9P7H.jpg';
+import backgroundUnsplash from '../../../assets/unsplash.jpg';
+import Tooltips from '../../../components/Tooltip';
+import { colors } from '../../../styles';
 
 export const Container = styled.div`
   display: flex;
@@ -457,6 +457,105 @@ export const BoxCard02 = styled.div`
   }
 `;
 
+export const BoxCard03 = styled.div`
+  z-index: 1;
+  background: ${colors.colorBackground04};
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+  height: 110vh;
+  top: 0;
+  margin-top: 30vh;
+
+  section {
+    width: 100%;
+    height: 30vh;
+    span {
+      font-size: 18px;
+    }
+  }
+
+  article {
+    border-top: 1px solid ${colors.colorTextcomplement};
+    border-bottom: 1px solid ${colors.colorTextcomplement};
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 90vh;
+    top: 0;
+    right: 0;
+
+    padding: 5rem 10rem;
+
+    div {
+      border: 1px solid ${colors.colorTextInWhite};
+      flex-grow: 1;
+      align-content: flex-start;
+      justify-content: space-around;
+      width: 100%;
+      height: 30vh;
+      border-radius: 7px;
+      flex-direction: column;
+      margin: 1rem;
+      -webkit-box-shadow: 0px 2px 7px 2px rgba(0, 0, 0, 0.4);
+      -moz-box-shadow: 0px 2px 7px 2px rgba(0, 0, 0, 0.4);
+      box-shadow: 0px 2px 7px 2px rgba(0, 0, 0, 0.4);
+      span {
+        font-size: 18px;
+        font-weight: bold;
+        color: ${colors.colorTextTitle};
+      }
+      p {
+        margin-top: 1rem;
+        font-size: 14px;
+        font-weight: normal;
+        color: ${colors.colorTextBase};
+      }
+    }
+  }
+
+  footer {
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 30vh;
+    top: 0;
+    right: 0;
+
+    padding: 5rem 10rem;
+
+    div {
+      border: 1px solid ${colors.colorTextInWhite};
+      flex-grow: 1;
+      align-content: flex-start;
+      justify-content: space-around;
+      width: 100%;
+      height: 30vh;
+      border-radius: 7px;
+      flex-direction: column;
+      margin: 1rem;
+      -webkit-box-shadow: 0px 2px 7px 2px rgba(0, 0, 0, 0.4);
+      -moz-box-shadow: 0px 2px 7px 2px rgba(0, 0, 0, 0.4);
+      box-shadow: 0px 2px 7px 2px rgba(0, 0, 0, 0.4);
+      span {
+        font-size: 18px;
+        font-weight: bold;
+        color: ${colors.colorTextTitle};
+      }
+      p {
+        margin-top: 1rem;
+        font-size: 14px;
+        font-weight: normal;
+        color: ${colors.colorTextBase};
+      }
+    }
+  }
+`;
 export const ContainerLogo = styled.div`
   text-align: left;
   display: flex;

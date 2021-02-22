@@ -21,12 +21,15 @@ const Route: React.FC<RouteProps> = ({ component: Component, ...rest }) => {
   const initGa = useCallback((history) => {
     GoogleAnalytics.initialize('G-RX43T90YH9', {
       debug: true,
+      titleCase: false,
     });
     trackPageView(history.location);
+
     history.listen(trackPageView);
   }, []);
 
   const history = useHistory();
+
   useEffect(() => {
     initGa(history);
   }, [history, initGa]);

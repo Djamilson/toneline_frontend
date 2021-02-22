@@ -29,7 +29,7 @@ export const Form = styled(Unform)`
   padding: 30px;
   flex-direction: column;
   background: ${colors.colorBoxBase};
-  border: 1px solid ${colors.colorBackground01};
+  border: 0;
   //border-radius: 8px;
   -webkit-box-shadow: 2px 2px 7px 2px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 2px 2px 7px 2px rgba(0, 0, 0, 0.4);
@@ -79,7 +79,6 @@ export const Content = styled.div`
   right: 0;
 
   padding-left: 5rem;
-  //border-radius: 8px;
 
   section {
     background: url(${backgroundUnsplash}) no-repeat center;
