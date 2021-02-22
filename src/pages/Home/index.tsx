@@ -11,13 +11,7 @@ import Person from '../../components/Section/Person';
 import SectionForm from '../../components/Section/SectionForm';
 import SectionOne from '../../components/Section/SectionOne';
 import SectionTwo from '../../components/Section/SectionTwo';
-import {
-  Container,
-  BoxCardImage11,
-  BoxCard,
-  BoxCard02,
-  BoxCard101,
-} from './styles';
+import { Container, BoxCardImage11, BoxCard, BoxCard02 } from './styles';
 
 const Home: React.FC = () => {
   const [sticky, setSticky] = useState({ isSticky: false, offset: 0 });

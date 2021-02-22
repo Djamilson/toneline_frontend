@@ -1,6 +1,5 @@
 import React from 'react';
 import { FaTwitter, FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
-import { MdAccessible } from 'react-icons/md';
 
 import 'aos/dist/aos.css';
 

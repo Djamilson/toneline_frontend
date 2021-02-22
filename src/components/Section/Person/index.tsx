@@ -5,7 +5,6 @@ import AOS from 'aos';
 import img_0_0_30 from '../../../assets/img_0_0_30.jpg';
 import N9Pf2J656aQ from '../../../assets/N9Pf2J656aQ.jpg';
 import ovrOPhu8vSw from '../../../assets/ovrOPhu8vSw.jpg';
-import splash from '../../../assets/splash.png';
 import { Container } from './styles';
 import 'aos/dist/aos.css';
 
