@@ -6,7 +6,6 @@ import 'aos/dist/aos.css';
 
 import logoCurso from '../../../assets/images/logo.svg';
 import { Container } from './styles';
-import 'aos/dist/aos.css';
 
 const SectionTwo: React.FC = () => {
   useEffect(() => {
