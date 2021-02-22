@@ -1,12 +1,15 @@
-import React, { useCallback, useRef } from 'react';
+import React, { useCallback, useEffect, useRef } from 'react';
 import { FaPhoneAlt } from 'react-icons/fa';
 import { FiCheck, FiMail, FiUser } from 'react-icons/fi';
 
 import { FormHandles } from '@unform/core';
+import AOS from 'aos';
 import { format } from 'date-fns';
 import ptBR from 'date-fns/locale/pt-BR';
 import { GoogleSpreadsheet } from 'google-spreadsheet';
 import * as Yup from 'yup';
+
+import 'aos/dist/aos.css';
 
 import { useLoading } from '../../../hooks/loading';
 import { useToast } from '../../../hooks/toast';
@@ -38,8 +41,6 @@ const SectionForm: React.FC = () => {
 
   const { addLoading, removeLoading } = useLoading();
 
-  // spreadsheet key is the long id in the sheets URL
-
   const SPREADSHEET_ID = process.env.REACT_APP_SPREADSHEET_ID;
   const SHEET_ID = process.env.REACT_APP_SHEET_ID;
   const CLIENT_EMAIL = process.env.REACT_APP_GOOGLE_CLIENT_EMAIL;
@@ -47,6 +48,10 @@ const SectionForm: React.FC = () => {
     /\\n/g,
     '\n',
   );
+
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
 
   const handleSubmit = useCallback(
     async (data: FormData, { reset }) => {
@@ -134,7 +139,7 @@ const SectionForm: React.FC = () => {
 
   return (
     <Container>
-      <Form ref={formRef} onSubmit={handleSubmit}>
+      <Form data-aos="fade-right" ref={formRef} onSubmit={handleSubmit}>
         <ArrowType>
           <Line />
           <Point />
@@ -172,7 +177,7 @@ const SectionForm: React.FC = () => {
           <strong>Enviar</strong>
         </Button>
       </Form>
-      <Content>
+      <Content data-aos="fade-left">
         <section>
           <span>14 DAYS</span>
           <span>RETURN</span>

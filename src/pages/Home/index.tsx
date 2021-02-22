@@ -115,35 +115,6 @@ const Home: React.FC = () => {
           </p>
         </article>
       </BoxCardImage11>
-      <BoxCard>
-        <div>
-          <MdAccessible />
-          <span>Testestg</span>
-          <p>JKHKJHjhkjh kjhkj hkj hkjhkjhkjhk kjhkjhk hkjhKJHkj hkjh</p>
-        </div>
-        <div>
-          <MdAccessible />
-          <span>Testestg</span>
-          <p>JKHKJHjhkjh kjhkj hkj hkjhkjhkjhk kjhkjhk hkjhKJHkj hkjh</p>
-        </div>
-        <div>
-          <MdAccessible />
-          <span>Testestg</span>
-          <p>JKHKJHjhkjh kjhkj hkj hkjhkjhkjhk kjhkjhk hkjhKJHkj hkjh</p>
-        </div>
-        <div>
-          <MdAccessible />
-          <span>Testestg</span>
-          <p>JKHKJHjhkjh kjhkj hkj hkjhkjhkjhk kjhkjhk hkjhKJHkj hkjh</p>
-        </div>
-      </BoxCard>
-      <BoxCard101>
-        <div>
-          <MdAccessible />
-          <span>Testestg</span>
-          <p>JKHKJHjhkjh kjhkj hkj hkjhkjhkjhk kjhkjhk hkjhKJHkj hkjh</p>
-        </div>
-      </BoxCard101>
       <Person />
       <Footer />
     </Container>

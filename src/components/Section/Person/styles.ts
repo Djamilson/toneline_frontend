@@ -1,19 +1,6 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 
 import { colors } from '../../../styles';
-
-const appearImageLeft = keyframes`
-  from{
-    opacity:0;
-    transform: translateX(50px);
-     -webkit-animation-timing-function: ease-out;
-  }
-  to{
-    opacity:1;
-    transform: translateX(0px)
-    -webkit-animation-timing-function: ease-in;
-  }
-`;
 
 export const Container = styled.div`
   z-index: 1;
@@ -22,7 +9,7 @@ export const Container = styled.div`
   justify-content: center;
   align-items: flex-start;
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   top: 0;
   right: 0;
   margin-top: 110vh;
@@ -33,6 +20,7 @@ export const Container = styled.div`
     -webkit-box-shadow: 0px 2px 7px 2px rgba(0, 0, 0, 0.4);
     -moz-box-shadow: 0px 2px 7px 2px rgba(0, 0, 0, 0.4);
     box-shadow: 0px 2px 7px 2px rgba(0, 0, 0, 0.4);
+
     transition: transform 0.8s;
     display: flex;
     justify-content: center;
@@ -50,12 +38,12 @@ export const Container = styled.div`
       margin-top: -70px;
 
       display: inline-block;
-      width: 160px;
-      height: 160px;
+      width: 140px;
+      height: 140px;
       text-align: center;
       border-radius: 50%;
 
-      line-height: 160px;
+      line-height: 140px;
       vertical-align: middle;
 
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
@@ -65,7 +53,7 @@ export const Container = styled.div`
       align-content: center;
       justify-content: center;
       width: 100%;
-      height: 40vh;
+      height: 55vh;
 
       flex-direction: column;
       padding: 1rem;
@@ -76,19 +64,19 @@ export const Container = styled.div`
         font-weight: normal;
         color: ${colors.colorTextBase};
         text-align: center;
-        line-height: 10px;
+        line-height: 23px;
       }
 
       h1 {
         font-size: 18px;
         font-weight: bold;
         color: ${colors.colorBackground01};
-        margin-top: 1rem;
+        margin-top: 2rem;
       }
     }
   }
 
   div + div {
-    margin-left: 15px;
+    margin-left: 25px;
   }
 `;
