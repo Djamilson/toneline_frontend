@@ -1,8 +1,5 @@
 import React from 'react';
 import { FaTwitter, FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
-
-import 'aos/dist/aos.css';
-
 import { Link } from 'react-router-dom';
 
 import {
