@@ -46,7 +46,7 @@ export const Form = styled(Unform)`
     float: left;
 
     legend {
-      font: 700 1rem Poppins;
+      font: 700 1.5rem Inter;
       color: ${colors.colorTitleInPrimary};
       margin-bottom: 3rem;
       margin-right: 4rem;
@@ -130,12 +130,12 @@ export const Line = styled.div`
 export const Point = styled.div`
   width: 0;
   height: 0;
-  border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent;
+  border-top: 20.5px solid transparent;
+  border-bottom: 20.5px solid transparent;
   border-left: 17px solid ${colors.colorBackground01};
   display: block;
   float: right;
-  margin-top: -2.5rem;
+  margin-top: -2.67rem;
 `;
 
 export const ArrowType = styled.div`
@@ -143,7 +143,7 @@ export const ArrowType = styled.div`
   margin-top: 0px;
   border: 0;
   margin-right: 17rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   float: right;
   margin-top: -0.5rem;
 `;

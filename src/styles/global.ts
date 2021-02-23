@@ -5,7 +5,8 @@ import { colors } from '.';
 export default createGlobalStyle`
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&family=Roboto:wght@400;500;700&display=swap');
 
 *{
   margin:0;
@@ -15,6 +16,19 @@ export default createGlobalStyle`
   outline:0;
 }
 
+@media(max-width: 1080px){
+  html{
+    font-size: 93.75%;
+  }
+}
+
+@media(max-width: 720px){
+  html{
+    font-size: 87.5%;
+  }
+}
+
+
 body{
  background: ${colors.colorBackground};
   color: #FFF;
@@ -22,13 +36,13 @@ body{
 }
 
 body, input, button{
-font-family: 'Poppins', sans-serif;
-font-size: 14px;
+font-family: 'Inter', sans-serif;
+font-size: 1rem;
 }
 
 h1, h2, h3, h4, h5, h6, strong {
   font-weight: 500;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 button {

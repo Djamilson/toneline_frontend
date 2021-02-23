@@ -22,7 +22,6 @@
     "imask": "^6.0.5",
     "leaflet": "^1.7.1",
     "pagarme": "^4.14.0",
-    "pigeon-maps": "^0.17.1",
     "polished": "^4.0.5",
     "react": "^17.0.1",
     "react-credit-cards": "^0.8.3",
@@ -32,7 +31,6 @@
     "react-hook-form": "^6.14.2",
     "react-icons": "^4.1.0",
     "react-input-mask": "^2.0.4",
-    "react-leaflet": "^3.1.0",
     "react-modal": "^3.12.1",
     "react-payment-card-component": "^0.2.1",
     "react-perfect-scrollbar": "^1.5.8",
@@ -45,7 +43,9 @@
     "styled-components": "^5.2.1",
     "typescript": "^4.0.3",
     "web-vitals": "^0.2.4",
-    "yup": "^0.32.8"
+    "yup": "^0.32.8",
+    "pigeon-maps": "^0.16.1",
+    "react-leaflet": "^2.7.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -72,9 +72,9 @@
     ]
   },
   "devDependencies": {
-    "@types/leaflet": "^1.5.23",
     "@types/react-credit-cards": "^0.8.0",
     "@types/react-input-mask": "^3.0.0",
+    "@types/react-leaflet": "^2.5.2",
     "@types/react-modal": "^3.10.6",
     "@types/react-router-dom": "^5.1.7",
     "@types/react-select": "^3.1.2",

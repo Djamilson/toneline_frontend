@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { MdAccessible } from 'react-icons/md';
+import { Marker } from 'react-leaflet';
 
 import logoCurso from '../../assets/images/logo.svg';
 import Footer from '../../components/Footer';
 import SubHeader from '../../components/Headers/Header';
 import Header from '../../components/Headers/SubHeader';
+import Map from '../../components/Map';
+import happyMapIcon from '../../components/Map/happMapIcon';
 import Background from '../../components/Section/Background';
 import Gallery from '../../components/Section/Gallery';
 import Person from '../../components/Section/Person';
@@ -110,6 +113,14 @@ const Home: React.FC = () => {
         </article>
       </BoxCardImage11>
       <Person />
+      <Map style={{ width: '100%', height: 280 }}>
+        <Marker
+          interactive={false}
+          icon={happyMapIcon}
+          position={[-27.2092052, -49.6401092]}
+        />
+      </Map>
+
       <Footer />
     </Container>
   );

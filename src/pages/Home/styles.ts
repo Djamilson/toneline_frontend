@@ -632,7 +632,7 @@ export const Footer = styled.div`
     height: 4rem;
     min-height: 4rem;
     border-radius: 0.4rem;
-    font: 700 1.4rem Poppins;
+    font: 700 1.4rem Inter;
 
     display: flex;
     align-items: center;

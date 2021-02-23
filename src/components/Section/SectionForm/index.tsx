@@ -84,7 +84,6 @@ const SectionForm: React.FC = () => {
           date: format(new Date(), 'dd/MM/yyyy HH:mm', {
             locale: ptBR,
           }),
-          status: false,
         };
 
         const doc = new GoogleSpreadsheet(SPREADSHEET_ID);
@@ -97,6 +96,16 @@ const SectionForm: React.FC = () => {
         await doc.loadInfo();
 
         const sheet = doc.sheetsById[String(SHEET_ID)];
+
+        //const spreadsheet = sheet.getActive();
+        //spreadsheet.getRange('E1').activate();
+
+        console.log(sheet.getSelection().getActiveRange());
+        //ranger.activate();
+        //const checkbox = sheet.newDataValidation().requireCheckbox().build();
+
+        //    console.log('checkbox:==>>>>>>>>>>>>>>>', cell);
+        //sheet.getRange(`E5`).setDataValidation(checkbox).setValue('FALSE');
 
         await sheet.addRow(row);
 

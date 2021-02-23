@@ -78,7 +78,7 @@ export const Container = styled.div<ContainerProps>`
     background: transparent;
     -webkit-text-fill-color: ${colors.colorTextcomplement};
 
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
     letter-spacing: 0.08rem;
     &::placeholder {
       color: ${colors.colorTextInPrimary};
