@@ -36,4 +36,5 @@ export default {
   colorBoxFooter: '#fafafc',
 
   colorButtonTextSecudary: '#f15e5e',
+  colorGreen: '#4DAF50',
 };

@@ -16,11 +16,12 @@ export const Container = styled.div`
   justify-content: center;
   align-items: flex-start;
   width: 100%;
-  height: 100vh;
+  height: 800px;
   top: 0;
   right: 0;
-  margin-top: 110vh;
+  margin-top: 80vh;
   padding: 5rem 5rem 5rem 10rem;
+  overflow-x: hidden;
 `;
 
 export const Form = styled(Unform)`
@@ -42,7 +43,6 @@ export const Form = styled(Unform)`
     padding-bottom: 20px;
     margin-top: 0rem;
     width: 100%;
-
     float: left;
   }
 `;
@@ -63,7 +63,7 @@ export const Content = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 90vh;
+  height: 558px;
   top: 0;
   right: 0;
 
@@ -138,10 +138,10 @@ export const PointerMini = styled.div`
   background: ${colors.colorBackground01};
   text-align: center;
   vertical-align: middle;
+  border-radius: 50px 0 0 50px;
+  margin-left: -5rem;
 
-  margin-left: -6rem;
-
-  top: 1rem;
+  top: 0rem;
 
   &:after {
     content: '';
@@ -150,18 +150,18 @@ export const PointerMini = styled.div`
     bottom: 0;
     width: 0;
     height: 0;
-    border-left: 1.25em solid white;
+    border-left: 0.75em solid white;
     //border-top: 1em solid transparent;
     //border-bottom: 1em solid transparent;
   }
   &:before {
     content: '';
     position: absolute;
-    right: -1.25em;
+    right: -0.75em;
     bottom: 0;
     width: 0;
     height: 0;
-    border-left: 1.25em solid ${colors.colorBackground01};
+    border-left: 0.75em solid ${colors.colorBackground01};
     border-top: 1em solid transparent;
     border-bottom: 1em solid transparent;
   }
@@ -169,7 +169,7 @@ export const PointerMini = styled.div`
 
 export const Cnt = styled.div`
   position: relative;
-  top: 0.25em;
+  top: 0.3em;
   left: 1em;
   color: white;
 `;
@@ -178,5 +178,5 @@ export const ContentInpunt = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin-top: 4rem;
+  margin-top: 2.5rem;
 `;

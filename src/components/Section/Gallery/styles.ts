@@ -25,7 +25,7 @@ export const Container = styled.div`
   height: 90vh;
   top: 0;
   right: 0;
-  margin-top: 110vh;
+  margin-top: 0vh;
   padding: 5rem 10rem;
 
   div {

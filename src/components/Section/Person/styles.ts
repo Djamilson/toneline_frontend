@@ -12,7 +12,7 @@ export const Container = styled.div`
   height: 100vh;
   top: 0;
   right: 0;
-  margin-top: 110vh;
+  margin-top: 50vh;
   padding: 5rem 10rem;
 
   div {

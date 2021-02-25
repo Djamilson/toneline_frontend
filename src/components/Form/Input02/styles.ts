@@ -21,7 +21,7 @@ export const Container = styled.div<ContainerProps>`
   align-items: center;
 
   & + div {
-    margin-top: 1.5rem;
+    margin-top: 0.5rem;
   }
 
   margin-bottom: 1em;
