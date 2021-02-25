@@ -60,7 +60,7 @@ export const Container = styled.div<ContainerProps>`
     border: 1px solid ${colors.colorLineInWhite};
     border-style: none none none none;
     transition: all 0.5s;
-    padding: 9px;
+    padding: 11px;
     margin-left: 2.5rem;
     width: 90.5%;
     color: ${colors.colorTextcomplement};
@@ -92,14 +92,8 @@ export const Container = styled.div<ContainerProps>`
   svg {
     color: #f00;
     display: block;
-    margin-top: -3.3rem;
+    margin-top: -3.7rem;
     margin-left: 10px;
-
-    ${(props) =>
-      props.isErrored &&
-      css`
-        margin-top: -3.3rem;
-      `}
   }
 
   label {

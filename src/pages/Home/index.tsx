@@ -14,7 +14,7 @@ import Person from '../../components/Section/Person';
 import SectionForm from '../../components/Section/SectionForm';
 import SectionOne from '../../components/Section/SectionOne';
 import SectionTwo from '../../components/Section/SectionTwo';
-import { Container, BoxCardImage11, BoxCard, BoxCard02 } from './styles';
+import { Container, BoxCardImage11, ContainerMap } from './styles';
 
 const Home: React.FC = () => {
   const [sticky, setSticky] = useState({ isSticky: false, offset: 0 });
@@ -42,51 +42,7 @@ const Home: React.FC = () => {
       <SectionOne />
       <SectionTwo />
       <SectionForm />
-      <BoxCard02>
-        <div>
-          <MdAccessible />
-          <span>Testestg</span>
-          <p>JKHKJHjhkjh kjhkj hkj hkjhkjhkjhk kjhkjhk hkjhKJHkj hkjh</p>
-        </div>
-        <div>
-          <MdAccessible />
-          <span>Testestg</span>
-          <p>JKHKJHjhkjh kjhkj hkj hkjhkjhkjhk kjhkjhk hkjhKJHkj hkjh</p>
-        </div>
-        <div>
-          <MdAccessible />
-          <span>Testestg</span>
-          <p>JKHKJHjhkjh kjhkj hkj hkjhkjhkjhk kjhkjhk hkjhKJHkj hkjh</p>
-        </div>
-        <div>
-          <MdAccessible />
-          <span>Testestg</span>
-          <p>JKHKJHjhkjh kjhkj hkj hkjhkjhkjhk kjhkjhk hkjhKJHkj hkjh</p>
-        </div>
-      </BoxCard02>
       <Gallery />
-      <BoxCard>
-        <div>
-          <MdAccessible />
-          <span>Testestg</span>
-          <p>JKHKJHjhkjh kjhkj hkj hkjhkjhkjhk kjhkjhk hkjhKJHkj hkjh</p>
-        </div>
-        <div>
-          <MdAccessible />
-          <span>Testestg</span>
-          <p>JKHKJHjhkjh kjhkj hkj hkjhkjhkjhk kjhkjhk hkjhKJHkj hkjh</p>
-        </div>
-        <div>
-          <MdAccessible />
-          <span>Testestg</span>
-          <p>JKHKJHjhkjh kjhkj hkj hkjhkjhkjhk kjhkjhk hkjhKJHkj hkjh</p>
-        </div>
-        <div>
-          <MdAccessible />
-          <span>Testestg</span>
-          <p>JKHKJHjhkjh kjhkj hkj hkjhkjhkjhk kjhkjhk hkjhKJHkj hkjh</p>
-        </div>
-      </BoxCard>
       <BoxCardImage11 offset={sticky.offset}>
         <section>
           <img src={logoCurso} alt="Proffy" />
@@ -113,14 +69,16 @@ const Home: React.FC = () => {
         </article>
       </BoxCardImage11>
       <Person />
-      <Map style={{ width: '100%', height: 280 }}>
-        <Marker
-          interactive={false}
-          icon={happyMapIcon}
-          position={[-27.2092052, -49.6401092]}
-        />
-      </Map>
 
+      <ContainerMap>
+        <Map style={{ width: '60%', height: 380, margin: '0 2rem' }}>
+          <Marker
+            interactive={false}
+            icon={happyMapIcon}
+            position={[-10.183906, -48.309326]}
+          />
+        </Map>
+      </ContainerMap>
       <Footer />
     </Container>
   );

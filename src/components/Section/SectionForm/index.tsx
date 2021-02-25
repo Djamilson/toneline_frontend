@@ -23,9 +23,9 @@ import {
   Form,
   Button,
   Content,
-  Point,
-  Line,
-  ArrowType,
+  ContentInpunt,
+  PointerMini,
+  Cnt,
 } from './styles';
 
 interface FormData {
@@ -148,35 +148,36 @@ const SectionForm: React.FC = () => {
 
   return (
     <Container>
-      <Form data-aos="fade-right" ref={formRef} onSubmit={handleSubmit}>
-        <ArrowType>
-          <Line />
-          <Point />
-        </ArrowType>
+      <Form ref={formRef} onSubmit={handleSubmit}>
         <fieldset>
-          <legend>Contato!</legend>
-
-          <Input placeholder="Nome" name="name" icon={FiUser} label="Nome" />
-          <Input
-            placeholder="E-mail"
-            name="email"
-            icon={FiMail}
-            label="E-mail"
-          />
-          <Input
-            id="phone"
-            name="phone"
-            icon={FaPhoneAlt}
-            label="Fone"
-            placeholder="Fone"
-            onChange={masks.phoneMask.onChange}
-          />
-          <InputTextArea
-            id="message"
-            name="message"
-            label="Sua mensagem"
-            placeholder="Escreva aqui!"
-          />
+          <PointerMini>
+            <Cnt>
+              <p>Contatos</p>
+            </Cnt>
+          </PointerMini>
+          <ContentInpunt>
+            <Input placeholder="Nome" name="name" icon={FiUser} label="Nome" />
+            <Input
+              placeholder="E-mail"
+              name="email"
+              icon={FiMail}
+              label="E-mail"
+            />
+            <Input
+              id="phone"
+              name="phone"
+              icon={FaPhoneAlt}
+              label="Fone"
+              placeholder="Fone"
+              onChange={masks.phoneMask.onChange}
+            />
+            <InputTextArea
+              id="message"
+              name="message"
+              label="Sua mensagem"
+              placeholder="Escreva aqui!"
+            />
+          </ContentInpunt>
         </fieldset>
 
         <Button type="submit">
