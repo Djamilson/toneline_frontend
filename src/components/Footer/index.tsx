@@ -19,24 +19,8 @@ const SectionTwo: React.FC = () => {
           <strong>TONELINE</strong> LOCADORA DE VEÍCULOS
         </h1>
         <section>
-          <Link
-            to={{
-              pathname:
-                'https://example.zendesk.com/hc/en-us/articles/123456789-Privacy-Policies',
-            }}
-            target="_blank"
-          >
-            Termos de uso
-          </Link>
-          <Link
-            to={{
-              pathname:
-                'https://example.zendesk.com/hc/en-us/articles/123456789-Privacy-Policies',
-            }}
-            target="_blank"
-          >
-            Política de Privacidade
-          </Link>
+          <Link to="/termsofuse">Termos de uso</Link>
+          <Link to="/privacypolicy">Política de Privacidade</Link>
         </section>
       </header>
       <SocialNetwork>

@@ -63,7 +63,7 @@ export const Content = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 558px;
+  height: 544px;
   top: 0;
   right: 0;
 
@@ -133,12 +133,12 @@ export const PointerMini = styled.div`
   display: inline-block;
   font-size: 20pt; //Width of pointer
   width: 300px;
-  height: 2em;
+  height: 1.5em;
   position: relative;
   background: ${colors.colorBackground01};
   text-align: center;
   vertical-align: middle;
-  border-radius: 50px 0 0 50px;
+  //border-radius: 50px 0 0 50px;
   margin-left: -5rem;
 
   top: 0rem;
@@ -162,14 +162,14 @@ export const PointerMini = styled.div`
     width: 0;
     height: 0;
     border-left: 0.75em solid ${colors.colorBackground01};
-    border-top: 1em solid transparent;
-    border-bottom: 1em solid transparent;
+    border-top: 0.75em solid transparent;
+    border-bottom: 0.75em solid transparent;
   }
 `;
 
 export const Cnt = styled.div`
   position: relative;
-  top: 0.3em;
+  top: 0.1em;
   left: 1em;
   color: white;
 `;

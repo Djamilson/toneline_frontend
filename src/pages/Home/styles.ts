@@ -122,7 +122,7 @@ export const ContainerMap = styled.div`
   justify-content: center;
   display: flex;
   align-items: center;
-  background: ${colors.colorBackground01};
+  background: ${colors.colorButtonText};
   z-index: 1;
   width: 100%;
   height: 100vh;
