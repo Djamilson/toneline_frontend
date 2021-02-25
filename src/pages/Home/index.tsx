@@ -1,17 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import { MdAccessible } from 'react-icons/md';
+import { Marker } from 'react-leaflet';
 
 import logoCurso from '../../assets/images/logo.svg';
 import Footer from '../../components/Footer';
 import SubHeader from '../../components/Headers/Header';
 import Header from '../../components/Headers/SubHeader';
+import Map from '../../components/Map';
+import happyMapIcon from '../../components/Map/happMapIcon';
 import Background from '../../components/Section/Background';
 import Gallery from '../../components/Section/Gallery';
 import Person from '../../components/Section/Person';
 import SectionForm from '../../components/Section/SectionForm';
 import SectionOne from '../../components/Section/SectionOne';
 import SectionTwo from '../../components/Section/SectionTwo';
-import { Container, BoxCardImage11, BoxCard, BoxCard02 } from './styles';
+import { Container, BoxCardImage11, ContainerMap } from './styles';
 
 const Home: React.FC = () => {
   const [sticky, setSticky] = useState({ isSticky: false, offset: 0 });
@@ -39,51 +42,7 @@ const Home: React.FC = () => {
       <SectionOne />
       <SectionTwo />
       <SectionForm />
-      <BoxCard02>
-        <div>
-          <MdAccessible />
-          <span>Testestg</span>
-          <p>JKHKJHjhkjh kjhkj hkj hkjhkjhkjhk kjhkjhk hkjhKJHkj hkjh</p>
-        </div>
-        <div>
-          <MdAccessible />
-          <span>Testestg</span>
-          <p>JKHKJHjhkjh kjhkj hkj hkjhkjhkjhk kjhkjhk hkjhKJHkj hkjh</p>
-        </div>
-        <div>
-          <MdAccessible />
-          <span>Testestg</span>
-          <p>JKHKJHjhkjh kjhkj hkj hkjhkjhkjhk kjhkjhk hkjhKJHkj hkjh</p>
-        </div>
-        <div>
-          <MdAccessible />
-          <span>Testestg</span>
-          <p>JKHKJHjhkjh kjhkj hkj hkjhkjhkjhk kjhkjhk hkjhKJHkj hkjh</p>
-        </div>
-      </BoxCard02>
       <Gallery />
-      <BoxCard>
-        <div>
-          <MdAccessible />
-          <span>Testestg</span>
-          <p>JKHKJHjhkjh kjhkj hkj hkjhkjhkjhk kjhkjhk hkjhKJHkj hkjh</p>
-        </div>
-        <div>
-          <MdAccessible />
-          <span>Testestg</span>
-          <p>JKHKJHjhkjh kjhkj hkj hkjhkjhkjhk kjhkjhk hkjhKJHkj hkjh</p>
-        </div>
-        <div>
-          <MdAccessible />
-          <span>Testestg</span>
-          <p>JKHKJHjhkjh kjhkj hkj hkjhkjhkjhk kjhkjhk hkjhKJHkj hkjh</p>
-        </div>
-        <div>
-          <MdAccessible />
-          <span>Testestg</span>
-          <p>JKHKJHjhkjh kjhkj hkj hkjhkjhkjhk kjhkjhk hkjhKJHkj hkjh</p>
-        </div>
-      </BoxCard>
       <BoxCardImage11 offset={sticky.offset}>
         <section>
           <img src={logoCurso} alt="Proffy" />
@@ -110,6 +69,16 @@ const Home: React.FC = () => {
         </article>
       </BoxCardImage11>
       <Person />
+
+      <ContainerMap>
+        <Map style={{ width: '60%', height: 380, margin: '0 2rem' }}>
+          <Marker
+            interactive={false}
+            icon={happyMapIcon}
+            position={[-10.183906, -48.309326]}
+          />
+        </Map>
+      </ContainerMap>
       <Footer />
     </Container>
   );

@@ -40,21 +40,10 @@ export const Form = styled(Unform)`
     border: 0;
     padding: 0rem;
     padding-bottom: 20px;
-    margin-top: -3rem;
+    margin-top: 0rem;
     width: 100%;
 
     float: left;
-
-    legend {
-      font: 700 1rem Poppins;
-      color: ${colors.colorTitleInPrimary};
-      margin-bottom: 3rem;
-      margin-right: 4rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-    }
   }
 `;
 
@@ -119,31 +108,75 @@ export const Line = styled.div`
   background: ${colors.colorBackground01};
   height: 40px;
   float: left;
+  position: absolute;
 
   border-radius: 0;
 
   -webkit-box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.4);
-  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.4);
   transition: all 0.2s ease-in-out;
 `;
 export const Point = styled.div`
-  width: 0;
-  height: 0;
-  border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent;
-  border-left: 17px solid ${colors.colorBackground01};
-  display: block;
-  float: right;
-  margin-top: -2.5rem;
+  display: inline-block;
+  font-size: 20pt; //Width of pointer
+  width: 400px;
+  height: 4em;
+  position: relative;
+  background: gray;
+  text-align: center;
+  vertical-align: middle;
+  margin: 0.6em;
 `;
 
-export const ArrowType = styled.div`
-  top: 0;
-  margin-top: 0px;
-  border: 0;
-  margin-right: 17rem;
-  margin-bottom: 1rem;
-  float: right;
-  margin-top: -0.5rem;
+export const PointerMini = styled.div`
+  display: inline-block;
+  font-size: 20pt; //Width of pointer
+  width: 300px;
+  height: 2em;
+  position: relative;
+  background: ${colors.colorBackground01};
+  text-align: center;
+  vertical-align: middle;
+
+  margin-left: -6rem;
+
+  top: 1rem;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 1.25em solid white;
+    //border-top: 1em solid transparent;
+    //border-bottom: 1em solid transparent;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    right: -1.25em;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 1.25em solid ${colors.colorBackground01};
+    border-top: 1em solid transparent;
+    border-bottom: 1em solid transparent;
+  }
+`;
+
+export const Cnt = styled.div`
+  position: relative;
+  top: 0.25em;
+  left: 1em;
+  color: white;
+`;
+
+export const ContentInpunt = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
 `;

@@ -106,7 +106,7 @@ const SectionTwo: React.FC = () => {
       <footer>
         <span>
           © Copyright 2021 <strong>Toneline</strong> - Todos os direitos
-          resevado
+          resevados
         </span>
       </footer>
     </Container>

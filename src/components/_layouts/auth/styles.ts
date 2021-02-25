@@ -34,7 +34,7 @@ export const Form = styled(Unform)`
     padding-bottom: 60px;
 
     legend {
-      font: 700 1rem Poppins;
+      font: 700 1rem Inter;
       color: ${colors.colorTextTitle};
       margin-bottom: 0.5rem;
       display: flex;
@@ -52,7 +52,7 @@ export const Form = styled(Unform)`
       border: 0;
       border-radius: 0rem;
 
-      font: 700 1rem Poppins;
+      font: 700 1rem Inter;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -123,7 +123,7 @@ export const Header = styled.header`
 
   h1 {
     margin-bottom: 18px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
     color: ${colors.colorTextTitle};
     line-height: 2.8rem;
     font-weight: bold;
@@ -132,7 +132,7 @@ export const Header = styled.header`
 
   h2 {
     margin-bottom: 18px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
     color: ${colors.colorTextTitle};
     line-height: 2.8rem;
     font-weight: bold;
@@ -147,7 +147,7 @@ export const Header = styled.header`
     border: 0;
     border-radius: 0rem;
 
-    font: 700 1rem Poppins;
+    font: 700 1rem Inter;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -209,7 +209,7 @@ export const Footer = styled.footer`
 
   h1 {
     margin-bottom: 18px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
     color: ${colors.colorTextTitle};
     line-height: 2.8rem;
     font-weight: bold;
@@ -218,7 +218,7 @@ export const Footer = styled.footer`
 
   h2 {
     margin-bottom: 16px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
     color: ${colors.colorTextTitle};
     line-height: 2.8rem;
     font-weight: bold;
@@ -235,14 +235,14 @@ export const Footer = styled.footer`
 
     h2 {
       color: ${colors.colorTextcomplement};
-      font: 700 1rem Poppins;
+      font: 700 1rem Inter;
       margin-left: 10px;
     }
 
     strong {
       color: ${colors.colorTextTitle};
       margin-left: 15px;
-      font: 700 1.2rem Poppins;
+      font: 700 1.2rem Inter;
     }
   }
 `;
@@ -270,7 +270,7 @@ export const ScheduleItemEdit = styled.div`
       border: 0;
       border-radius: 0rem;
 
-      font: 700 1rem Poppins;
+      font: 700 1rem Inter;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -322,7 +322,7 @@ export const GobackButton = styled.button`
   border: 0;
   border-radius: 0rem;
 
-  font: 700 1rem Poppins;
+  font: 700 1rem Inter;
   display: flex;
   align-items: center;
   justify-content: center;
