@@ -16,8 +16,8 @@ import {
 const Header: React.FC = () => {
   const menus = [
     { label: 'Home', selected: true, scroll: '0' },
-    { label: 'Contato', selected: false, scroll: '2400' },
-    { label: 'Localização', selected: false, scroll: '5150' },
+    { label: 'Contato', selected: false, scroll: '2380' },
+    { label: 'Localização', selected: false, scroll: '5250' },
   ];
 
   const [sticky, setSticky] = useState({ isSticky: false, offset: 0 });
