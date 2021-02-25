@@ -1,186 +1,161 @@
-import React, { useEffect, useState } from 'react';
-import { FiAlertCircle } from 'react-icons/fi';
-import { MdAccessible } from 'react-icons/md';
+import React from 'react';
 
-import logoCurso from '../../../assets/images/logo.svg';
+import Footer from '../../../components/Footer';
 import SubHeader from '../../../components/Headers/Header';
 import Header from '../../../components/Headers/SubHeader';
-import Background from '../../../components/Section/Background';
-import Gallery from '../../../components/Section/Gallery';
-import SectionForm from '../../../components/Section/SectionForm';
-import SectionOne from '../../../components/Section/SectionOne';
-import SectionTwo from '../../../components/Section/SectionTwo';
-import { colors } from '../../../styles';
-import {
-  Container,
-  BoxCardImage11,
-  BoxCard,
-  BoxCard02,
-  BoxCard03,
-  BoxCard101,
-  Tooltip,
-} from './styles';
+import ScrollIndicator from '../../../components/ScrollIndicator';
+import { Container, Content } from './styles';
 
 const PrivacyPolicy: React.FC = () => {
-  const [sticky, setSticky] = useState({ isSticky: false, offset: 0 });
-
-  useEffect(() => {
-    const handleScrollEvent = () => {
-      if (window.pageYOffset > 890) {
-        setSticky({ isSticky: true, offset: window.pageYOffset });
-      }
-      if (window.pageYOffset < 1800) {
-        setSticky({ isSticky: false, offset: 0 });
-      }
-    };
-
-    window.addEventListener('scroll', handleScrollEvent);
-    return () => {
-      window.removeEventListener('scroll', handleScrollEvent);
-    };
-  }, [setSticky, sticky.offset]);
   return (
     <Container>
+      <ScrollIndicator />
       <Header />
       <SubHeader />
-      <Background isSticky={sticky.isSticky} />
-      <SectionOne />
-      <SectionTwo />
-      <SectionForm />
-      <BoxCard02>
+      <Content>
         <div>
-          <MdAccessible />
-          <span>Testestg</span>
-          <p>JKHKJHjhkjh kjhkj hkj hkjhkjhkjhk kjhkjhk hkjhKJHkj hkjh</p>
-        </div>
-        <div>
-          <MdAccessible />
-          <span>Testestg</span>
-          <p>JKHKJHjhkjh kjhkj hkj hkjhkjhkjhk kjhkjhk hkjhKJHkj hkjh</p>
-        </div>
-        <div>
-          <MdAccessible />
-          <span>Testestg</span>
-          <p>JKHKJHjhkjh kjhkj hkj hkjhkjhkjhk kjhkjhk hkjhKJHkj hkjh</p>
-        </div>
-        <div>
-          <MdAccessible />
-          <span>Testestg</span>
-          <p>JKHKJHjhkjh kjhkj hkj hkjhkjhkjhk kjhkjhk hkjhKJHkj hkjh</p>
-        </div>
-      </BoxCard02>
-      <Gallery />
-      <BoxCard>
-        <div>
-          <MdAccessible />
-          <span>Testestg</span>
-          <p>JKHKJHjhkjh kjhkj hkj hkjhkjhkjhk kjhkjhk hkjhKJHkj hkjh</p>
-        </div>
-        <div>
-          <MdAccessible />
-          <span>Testestg</span>
-          <p>JKHKJHjhkjh kjhkj hkj hkjhkjhkjhk kjhkjhk hkjhKJHkj hkjh</p>
-        </div>
-        <div>
-          <MdAccessible />
-          <span>Testestg</span>
-          <p>JKHKJHjhkjh kjhkj hkj hkjhkjhkjhk kjhkjhk hkjhKJHkj hkjh</p>
-        </div>
-        <div>
-          <MdAccessible />
-          <span>Testestg</span>
-          <p>JKHKJHjhkjh kjhkj hkj hkjhkjhkjhk kjhkjhk hkjhKJHkj hkjh</p>
-        </div>
-      </BoxCard>
-      <BoxCardImage11 offset={sticky.offset}>
-        <section>
-          <img src={logoCurso} alt="Proffy" />
-          <span>Locadora de Veículo neline</span>
-        </section>
+          <h2>Termos e Condições de Compra e Toneline Locadora de Veículos</h2>
 
-        <article>
-          <MdAccessible />
-          <h2>Seu carro para reserva!! </h2>
-          <span>Testestg</span>
           <p>
-            Powering the SUV is a 1.6-litre VTEC petra Standard equipment across
-            all grades is parking sensors and a rear-view camera and Honda’s
-            SENSIN system. This suite of driver assistance and safety systems
-            including collision mitigation braking system, forward collision
-            warning, lane keep assist, lane departure warning, road departure
-            mitigation, adaptive cruise control and traffic sign rec
+            Considerando que a Toneline Locadora de Veículos realiza venda de
+            produtos e serviços pela internet; Considerando o interesse do
+            Cliente na compra dos produtos oferecidos pela Toneline Locadora de
+            Veículos (“Produtos”) em seus canais de venda; O presente contrato
+            tem por finalidade estabelecer as condições gerais de uso e compra
+            de produtos e serviços do cliente do site Toneline Locadora de
+            Veículos.
           </p>
+
           <p>
-            Powering the SUV is a 1.6-litre VTEC petra Standard equipment across
-            all grades is parking sensors and a rear-view camera and Honda’s
-            SENSIN system.
+            I. Confidencialidade: é de responsabilidade da Toneline Locadora de
+            Veículos a preservação da confidencialidade de todos os dados e
+            informações fornecidos pelo Cliente no processo de compra. A
+            segurança do site é auditada diariamente e garantida contra a ação
+            de hackers, através do selo “Site Blindado”.
           </p>
-        </article>
-      </BoxCardImage11>
-      <BoxCard>
-        <div>
-          <MdAccessible />
-          <span>Testestg</span>
-          <p>JKHKJHjhkjh kjhkj hkj hkjhkjhkjhk kjhkjhk hkjhKJHkj hkjh</p>
+
+          <p>
+            II. Serviço de Atendimento ao Cliente (SAC): O cliente dispõe desse
+            serviço para sanar suas dúvidas, solucionar eventuais solicitações
+            ou reclamações a respeito do seu pedido ou de qualquer conteúdo
+            disponibilizado no site. O SAC poderá ser acionado por meio de
+            telefone ou de formulário do site.
+          </p>
+
+          <p>
+            III. Política de entrega: o prazo para entrega dos Produtos é
+            informado durante o procedimento de compra, contabilizado em dias
+            úteis. As entregas dos Produtos são realizadas de segunda a
+            sexta-feira, das 8h às 22h. Excepcionalmente, algumas entregas de
+            Produtos podem ocorrer aos sábados, domingos e feriados.
+          </p>
+
+          <p>
+            III.I – A conferência da adequação das dimensões do produto é de
+            responsabilidade do Cliente, que deverá se assegurar de que estas
+            estão de acordo com os limites espaciais dos elevadores, portas e
+            corredores do local da entrega. Não será realizada a montagem ou
+            desmontagem do produto, transporte pela escada e/ou portas e
+            janelas, ou içamento das entregas.
+          </p>
+
+          <p>
+            III.II – Serão realizadas até três tentativas de entrega no local
+            informado, em dias alternados, com intervalo de até 48h entre uma
+            entrega e outra. É indispensável que, no endereço solicitado, haja
+            uma pessoa autorizada pelo comprador, maior de 18 anos, e portando
+            documento de identificação para receber a mercadoria e assinar o
+            protocolo de entrega. Se houver três tentativas de entrega sem
+            sucesso, o pedido retornará para o Centro de Distribuição da
+            Toneline Locadora de Veículos.
+          </p>
+
+          <p>
+            III.III – Após a finalização do pedido não é possível alterar a
+            forma de pagamento e/ou endereço de entrega, solicitar adiantamento
+            ou, ainda, prioridade da entrega.
+          </p>
+
+          <p>
+            III.IV – O prazo de entrega informado durante o procedimento de
+            compra do Produto leva em consideração o estoque, a região, o
+            processo de emissão da nota fiscal e o tempo de preparo do produto.
+            A cada atualização no status de entrega do pedido, o sistema da
+            Toneline Locadora de Veículos envia, automaticamente, e-mails de
+            alerta para o Cliente.
+          </p>
+
+          <p>
+            III.VI – A Toneline Locadora de Veículos não autoriza a
+            transportadora a: entrar no domicílio; entregar por meios
+            alternativos (exemplo: içar produto por janela); realizar instalação
+            ou manutenção de produtos; abrir a embalagem do produto; realizar
+            entrega em endereço diferente do que consta no DANFE; realizar
+            entrega a menor de idade ou sem documento de identificação.
+          </p>
+
+          <p>
+            III.VII – A Toneline Locadora de Veículos não se responsabiliza pela
+            retenção de mercadorias na SEFAZ quando esta se dever exclusivamente
+            a pendências do cliente, sendo, portanto, necessário seu
+            comparecimento no posto fiscal para que a mercadoria seja liberada,
+            tendo em vista que nestes casos as informações referentes a
+            liberações e pagamentos só são passadas aos interessados.
+          </p>
+
+          <p>
+            IV. Direito de arrependimento: ao Cliente será facultado o exercício
+            do direito de arrependimento da compra, com a finalidade de
+            devolução do Produto, hipótese na qual deverão ser observadas as
+            seguintes condições: o prazo de desistência da compra do produto é
+            de até 7 (sete) dias corridos, a contar da data do recebimento; em
+            caso de devolução, o produto deverá ser devolvido à Toneline
+            Locadora de Veículos na embalagem original, acompanhado do DANFE
+            (Documento Auxiliar da Nota Fiscal Eletrônica), do manual e de todos
+            os seus acessórios.
+          </p>
+
+          <p>
+            IV.I – O Cliente deverá solicitar a devolução através do Serviço de
+            Atendimento ao Cliente (SAC) ou diretamente no Painel de Controle,
+            no tópico “cancelar pedido”. As despesas decorrentes de coleta ou
+            postagem do Produto serão custeadas pela Toneline Locadora de
+            Veículos.
+          </p>
+
+          <p>
+            IV.II – Após a chegada do produto ao Centro de Distribuição, a
+            Toneline Locadora de Veículos verificará se as condições supra
+            citadas foram atendidas. Em caso afirmativo, providenciará a
+            restituição no valor total da compra.
+          </p>
+
+          <p>
+            IV.III – Em compras com cartão de crédito a administradora do cartão
+            será notificada e o estorno ocorrerá na fatura seguinte ou na
+            posterior, de uma só vez, seja qual for o número de parcelas
+            utilizado na compra. O prazo de ressarcimento e, ainda, a cobrança
+            das parcelas remanescentes após o estorno integral do valor do
+            Produto no cartão de crédito do Cliente realizado pela Cutilagem
+            Russa, é de responsabilidade da administradora do cartão. Na
+            hipótese de cobrança de parcelas futuras pela administradora do
+            cartão, o Cliente não será onerado, vez que a Toneline Locadora de
+            Veículos, conforme mencionado acima, realiza o estorno do valor
+            integral do Produto em uma única vez, sendo o crédito referente ao
+            estorno concedido integralmente pela administradora do cartão na
+            fatura de cobrança subsequente ao mês do cancelamento.
+          </p>
+
+          <p>
+            IV.IV – Em compras pagas com boleto bancário ou débito em conta, a
+            restituição será efetuada por meio de depósito bancário, em até 10
+            (dez) dias úteis, somente na conta corrente do(a) comprador(a), que
+            deve ser individual. É necessário que o CPF do titular da conta
+            corrente.
+          </p>
         </div>
-        <div>
-          <MdAccessible />
-          <span>Testestg</span>
-          <p>JKHKJHjhkjh kjhkj hkj hkjhkjhkjhk kjhkjhk hkjhKJHkj hkjh</p>
-        </div>
-        <div>
-          <MdAccessible />
-          <span>Testestg</span>
-          <p>JKHKJHjhkjh kjhkj hkj hkjhkjhkjhk kjhkjhk hkjhKJHkj hkjh</p>
-        </div>
-        <div>
-          <MdAccessible />
-          <span>Testestg</span>
-          <p>JKHKJHjhkjh kjhkj hkj hkjhkjhkjhk kjhkjhk hkjhKJHkj hkjh</p>
-        </div>
-      </BoxCard>
-      <BoxCard101>
-        <div>
-          <MdAccessible />
-          <span>Testestg</span>
-          <p>JKHKJHjhkjh kjhkj hkj hkjhkjhkjhk kjhkjhk hkjhKJHkj hkjh</p>
-        </div>
-      </BoxCard101>
-      <Gallery>
-        <Tooltip title="TESTESET">
-          <FiAlertCircle color={colors.colorBackground01} size={20} />
-        </Tooltip>
-      </Gallery>
-      <BoxCard03>
-        <section>
-          <span>Teste</span>
-        </section>
-        <article>
-          <div>
-            <MdAccessible />
-            <span>Testestg</span>
-            <p>JKHKJHjhkjh kjhkj hkj hkjhkjhkjhk kjhkjhk hkjhKJHkj hkjh</p>
-          </div>
-          <div>
-            <MdAccessible />
-            <span>Testestg</span>
-            <p>JKHKJHjhkjh kjhkj hkj hkjhkjhkjhk kjhkjhk hkjhKJHkj hkjh</p>
-          </div>
-          <div>
-            <MdAccessible />
-            <span>Testestg</span>
-            <p>JKHKJHjhkjh kjhkj hkj hkjhkjhkjhk kjhkjhk hkjhKJHkj hkjh</p>
-          </div>
-          <div>
-            <MdAccessible />
-            <span>Testestg</span>
-            <p>JKHKJHjhkjh kjhkj hkj hkjhkjhkjhk kjhkjhk hkjhKJHkj hkjh</p>
-          </div>
-        </article>
-        <footer>
-          <span>Teste</span>
-        </footer>
-      </BoxCard03>
+      </Content>
+      <Footer />
     </Container>
   );
 };
