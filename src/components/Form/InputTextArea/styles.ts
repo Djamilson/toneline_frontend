@@ -15,13 +15,8 @@ export const InputBlock = styled.div`
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  margin: 0;
 
   width: 100%;
-
-  && {
-    margin-top: 1.4rem;
-  }
 
   label {
     font-size: 0.8rem;

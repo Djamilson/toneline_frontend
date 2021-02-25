@@ -15,9 +15,9 @@ import {
 
 const Header: React.FC = () => {
   const menus = [
-    { label: 'Home', path: '/', selected: true },
-    { label: 'Contato', path: '/Contato', selected: false },
-    { label: 'Sobre', path: '/about', selected: false },
+    { label: 'Home', selected: true, scroll: '0' },
+    { label: 'Contato', selected: false, scroll: '3000' },
+    { label: 'Localização', selected: false, scroll: '7000' },
   ];
 
   const [sticky, setSticky] = useState({ isSticky: false, offset: 0 });
@@ -30,7 +30,6 @@ const Header: React.FC = () => {
 
   useEffect(() => {
     if (!headerRef.current) return;
-
     const handleScrollEvent = () => {
       if (window.pageYOffset > 90) {
         setSticky({ isSticky: true, offset: window.pageYOffset });

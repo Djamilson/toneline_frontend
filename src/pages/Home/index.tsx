@@ -8,6 +8,7 @@ import SubHeader from '../../components/Headers/Header';
 import Header from '../../components/Headers/SubHeader';
 import Map from '../../components/Map';
 import happyMapIcon from '../../components/Map/happMapIcon';
+import ScrollIndicator from '../../components/ScrollIndicator';
 import Background from '../../components/Section/Background';
 import Gallery from '../../components/Section/Gallery';
 import Person from '../../components/Section/Person';
@@ -36,12 +37,16 @@ const Home: React.FC = () => {
   }, [setSticky, sticky.offset]);
   return (
     <Container>
+      <ScrollIndicator />
       <Header />
       <SubHeader />
       <Background isSticky={sticky.isSticky} />
+
       <SectionOne />
       <SectionTwo />
+
       <SectionForm />
+
       <Gallery />
       <BoxCardImage11 offset={sticky.offset}>
         <section>
@@ -71,7 +76,7 @@ const Home: React.FC = () => {
       <Person />
 
       <ContainerMap>
-        <Map style={{ width: '60%', height: 380, margin: '0 2rem' }}>
+        <Map style={{ width: '100%', height: 380, overflowX: 'hidden' }}>
           <Marker
             interactive={false}
             icon={happyMapIcon}

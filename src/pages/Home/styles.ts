@@ -51,7 +51,7 @@ export const BoxCardImage11 = styled.div<IPropsOffset>`
   height: 90vh;
   top: 0;
   right: 0;
-  margin-top: 60vh;
+  margin-top: 0vh;
 
   section {
     //animation: ${appearImageRigth} 1s;
@@ -122,8 +122,9 @@ export const ContainerMap = styled.div`
   justify-content: center;
   display: flex;
   align-items: center;
-  padding: 0 5rem;
   background: ${colors.colorBackground01};
   z-index: 1;
-  width: 100rem;
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
 `;

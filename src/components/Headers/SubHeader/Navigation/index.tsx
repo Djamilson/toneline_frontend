@@ -1,60 +1,59 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
 
-import IMenu from '../../../../types/menu';
-import { NavigationLink, Navigation, MenuLI } from './styles';
+import { Navigation, MenuLI, NavigationButton } from './styles';
 
+interface IMenu {
+  label: string;
+  selected: boolean;
+  scroll: string;
+}
 interface IProps {
   menus: IMenu[];
 }
 
 const MeNavigation: React.FC<IProps> = ({ menus }) => {
-  const location = useLocation();
-
+  const [scroll, setScroll] = useState<number>(0);
   const [serealizableList, setSerealizableList] = useState<IMenu[]>(() => {
     return [] as IMenu[];
   });
 
-  const load = useCallback(() => {
-    function handlerIsActive(link: string) {
-      if (location.pathname.localeCompare('/') === 0) {
-        return !location.pathname.indexOf(link);
-      }
-
-      if (location.pathname.length < 2 && link.length < 2) {
-        return !location.pathname.indexOf(link);
-      }
-
-      if (location.pathname.length > 1 && link.length > 1) {
-        return !location.pathname.indexOf(link);
-      }
-
-      return Boolean(false);
-    }
-
-    setSerealizableList(
-      menus?.map((menu: IMenu) => {
-        return { ...menu, selected: handlerIsActive(menu.path) };
-      }),
-    );
-  }, [location, menus]);
+  const load = useCallback(
+    (value) => {
+      setSerealizableList(
+        menus?.map((menu: IMenu) => {
+          if (menu.label === value) {
+            return { ...menu, selected: true };
+          }
+          return menu;
+        }),
+      );
+    },
+    [menus, setSerealizableList],
+  );
 
   useEffect(() => {
-    load();
+    load('Home');
   }, [load]);
+
+  useEffect(() => {
+    window.scrollTo({
+      top: Number(scroll),
+      behavior: 'smooth',
+    });
+  }, [scroll]);
 
   return (
     <Navigation>
       {serealizableList?.map((menu: IMenu) => {
         return (
-          <MenuLI key={menu.path}>
-            <NavigationLink
-              to={menu.path}
-              aria-label={menu.label}
+          <MenuLI key={menu.label}>
+            <NavigationButton
+              type="button"
               selected={menu.selected}
+              onClick={() => setScroll(Number(menu.scroll))}
             >
-              {menu.label}
-            </NavigationLink>
+              <span>{menu.label}</span>
+            </NavigationButton>
           </MenuLI>
         );
       })}

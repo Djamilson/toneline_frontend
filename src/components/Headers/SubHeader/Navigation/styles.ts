@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-
 import styled from 'styled-components';
 
 import { colors } from '../../../../styles';
@@ -58,7 +56,7 @@ export const MenuLI = styled.li`
   }
 `;
 
-export const NavigationLink = styled(Link)<Props>`
+export const NavigationButton = styled.button<Props>`
   color: ${(props) =>
     props.selected
       ? `${colors.colorTextInWhite}`
@@ -69,12 +67,12 @@ export const NavigationLink = styled(Link)<Props>`
   font-weight: bold;
   text-align: center;
   background: none;
-
+  border: 0;
   display: flex;
   align-items: baseline;
   justify-content: center;
   transition: background-color 0.2s;
-  text-decoration: none;
+  width: 80px;
 
   span {
     display: block;
