@@ -5,16 +5,32 @@ import { colors } from '../../../styles';
 export const Container = styled.div`
   z-index: 1;
   background: ${colors.colorBackground02};
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  width: 100%;
-  height: 90vh;
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-columns: 1fr;
+
+  height: 240vh;
   top: 0;
   right: 0;
   margin-top: 110vh;
   padding: 5rem;
 
+  @media (min-width: 500px) and (max-width: 1024px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    height: 90vh;
+  }
+
+  @media (max-width: 499px) {
+    padding: 0;
+    left: 0;
+    //border: 1px solid #f00;
+    width: 100%;
+    height: 310vh;
+  }
   div {
     display: flex;
     width: 100%;
@@ -22,7 +38,11 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
     padding: 0 1rem;
-    border-right: 1px solid ${colors.colorBackground04};
+
+    @media (min-width: 1024px) {
+      border-right: 1px solid ${colors.colorBackground04};
+    }
+
     align-self: baseline;
 
     svg {
@@ -64,6 +84,17 @@ export const Container = styled.div`
       p {
         color: ${colors.colorBackground02};
       }
+    }
+  }
+
+  @media (max-width: 768px) {
+    div:nth-child(odd) {
+      border-right: 1px solid ${colors.colorBackground04};
+    }
+  }
+  @media (max-width: 500px) {
+    div:nth-child(odd) {
+      border-right: none;
     }
   }
 `;

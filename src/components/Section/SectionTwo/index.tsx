@@ -4,7 +4,6 @@ import { MdAccessible } from 'react-icons/md';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-import logoCurso from '../../../assets/images/logo.svg';
 import { Container } from './styles';
 import 'aos/dist/aos.css';
 
@@ -14,10 +13,9 @@ const SectionTwo: React.FC = () => {
   }, []);
   return (
     <Container>
-      <section data-aos="fade-right">
-        <img src={logoCurso} alt="Proffy" />
-        <span>Locadora de Veículo neline</span>
-      </section>
+      <div data-aos="fade-right">
+        <section />
+      </div>
 
       <article>
         <MdAccessible />
@@ -27,9 +25,7 @@ const SectionTwo: React.FC = () => {
           Powering the SUV is a 1.6-litre VTEC petra Standard equipment across
           all grades is parking sensors and a rear-view camera and Honda’s
           SENSIN system. This suite of driver assistance and safety systems
-          including collision mitigation braking system, forward collision
-          warning, lane keep assist, lane departure warning, road departure
-          mitigation, adaptive cruise control and traffic sign rec
+          including collision mitigation braking system.
         </p>
         <p>
           Powering the SUV is a 1.6-litre VTEC petra Standard equipment across
