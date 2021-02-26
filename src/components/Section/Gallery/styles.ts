@@ -18,7 +18,7 @@ const appearImageLeft = keyframes`
 export const Container = styled.div`
   z-index: 1;
   background: ${colors.colorBackground02};
-  display: flex;
+
   justify-content: center;
   align-items: flex-start;
   width: 100%;
@@ -28,6 +28,15 @@ export const Container = styled.div`
   margin-top: 0vh;
   padding: 5rem 10rem;
 
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-columns: 1fr;
+
+  @media (min-width: 1024px) {
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+    height: 90vh;
+  }
+
   div {
     background: ${colors.colorBackground02};
     display: flex;
@@ -36,7 +45,7 @@ export const Container = styled.div`
     flex-direction: column;
     margin: 0 0.5rem;
     border: 0;
-    width: 25vw;
+    width: 20vw;
     height: 60vh;
     -webkit-box-shadow: 0px 2px 7px 2px rgba(0, 0, 0, 0.4);
     -moz-box-shadow: 0px 2px 7px 2px rgba(0, 0, 0, 0.4);

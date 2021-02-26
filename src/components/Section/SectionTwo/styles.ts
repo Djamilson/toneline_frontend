@@ -11,25 +11,50 @@ export const Container = styled.div`
   justify-content: center;
   align-items: flex-start;
   width: 100%;
-  height: 90vh;
+  height: 250vh;
   top: 0;
   right: 0;
   margin-top: 60vh;
+  flex-direction: column;
 
-  section {
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    height: 120vh;
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    flex-direction: row;
+    height: 140vh;
+  }
+
+  div {
     background: url(${backgroundUnsplash}) no-repeat center;
-    background-size: 100% auto;
-    height: 90vh;
-    flex-grow: 1;
+    background-size: cover;
+
+    flex: 1;
     align-content: flex-start;
     justify-content: space-around;
     flex-direction: column;
 
-    animation: appearImageLeft 12s linear infinite;
+    animation: appearImageLeft 10s linear infinite;
     transform: translateY(4em) rotateZ(-5deg);
     transition: transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1),
       opacity 0.3s 0.25s ease-out;
     will-change: transform, opacity;
+
+    width: 100%;
+    height: auto;
+
+    section {
+      width: 50vw;
+      height: auto;
+    }
+
+    @media (min-width: 768px) {
+      margin-top: 5rem;
+      height: 600px;
+      width: 50vw;
+    }
   }
 
   article {
@@ -37,8 +62,12 @@ export const Container = styled.div`
     flex-direction: column;
     align-content: center;
     justify-content: center;
-    width: 40%;
+    width: 100%;
     margin: 4rem;
+
+    @media (min-width: 768px) {
+      width: 40%;
+    }
     h2 {
       font-size: 30px;
       font-weight: bold;
@@ -56,6 +85,11 @@ export const Container = styled.div`
       font-size: 18px;
       font-weight: normal;
       color: ${colors.colorTitleInPrimary};
+      text-align: justify;
+      line-height: 1.5;
+      @media (max-width: 768px) {
+        width: 80%;
+      }
     }
   }
 `;

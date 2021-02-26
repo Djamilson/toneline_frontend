@@ -10,7 +10,7 @@ export const Container = styled.div`
   z-index: 1;
   background: ${colors.colorBackground02};
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr;
   grid-gap: 1rem;
 
   justify-content: center;
@@ -22,6 +22,10 @@ export const Container = styled.div`
   margin-top: 80vh;
   padding: 5rem 5rem 5rem 10rem;
   overflow-x: hidden;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+  }
 `;
 
 export const Form = styled(Unform)`

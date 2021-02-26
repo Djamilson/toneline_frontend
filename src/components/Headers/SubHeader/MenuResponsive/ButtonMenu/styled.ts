@@ -14,7 +14,7 @@ export const ButtonHamburger = styled.button<IProps>`
 
   display: inline-block;
 
-  top: ${(props) => (props.visible === false ? '2.4rem' : '2.6rem')};
+  top: ${(props) => (props.visible === false ? '2.4rem' : '0.6rem')};
   left: ${(props) => (props.visible === false ? '280px' : '1rem')};
 
   @media (min-width: 1024px) {

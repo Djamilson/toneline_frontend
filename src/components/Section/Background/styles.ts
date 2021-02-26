@@ -45,51 +45,42 @@ export const Container = styled.div<IProps>`
     width: 100%;
   }
 
-  div {
-    border: 0;
+  section {
     display: flex;
-    width: 100%;
-    min-width: 100vw;
-    height: 100vh;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    margin-left: 20rem;
-    margin-top: -7rem;
-
-    @media (min-width: 1024px) {
-      min-width: 45vw;
+    h1 {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: 42px;
+      font-weight: bold;
+      margin-top: 6.8rem;
+      @media (min-width: 1024px) {
+        margin-top: 6rem;
+        margin-left: 30rem;
+      }
     }
 
-    section {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+    > span {
+      font-weight: 500;
+      font-size: 3.3rem;
+      line-height: 4.6rem;
+      margin-top: 0.8rem;
 
-      h1 {
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-size: 42px;
-        font-weight: bold;
+      @media (min-width: 1024px) {
+        margin-left: 40.5rem;
       }
 
-      > span {
-        font-weight: 500;
-        font-size: 3.3rem;
-        line-height: 4.6rem;
-        margin-top: 0.8rem;
+      strong {
+        font-weight: bold;
+        font-size: 4rem;
+        color: ${colors.colorBackground01};
+      }
 
-        strong {
-          font-weight: bold;
-          font-size: 4rem;
-          color: ${colors.colorBackground01};
-        }
-
-        @media (min-width: 1100px) {
-          text-align: initial;
-          font-size: 1.6rem;
-        }
+      @media (min-width: 1100px) {
+        text-align: initial;
+        font-size: 1.6rem;
       }
     }
   }

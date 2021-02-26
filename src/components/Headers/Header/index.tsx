@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { FiPhoneCall } from 'react-icons/fi';
 
 import whatsapp from '../../../assets/images/icons/whatsapp.svg';
-import { Container, Content, Box } from './styles';
+import { Container, Content, Box, Item } from './styles';
 
 const Header: React.FC = () => {
   const [sticky, setSticky] = useState({ isSticky: false, offset: 0 });
@@ -30,7 +30,7 @@ const Header: React.FC = () => {
     <Container ref={headerRef} visible={sticky.isSticky}>
       <Content>
         <Box>
-          <span>Locadora de Veículos</span>
+          <Item>Locadora de Veículos</Item>
           <span>
             <img src={whatsapp} alt="Proffy" />
             <strong>(63) 3225-0471</strong>

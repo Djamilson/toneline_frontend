@@ -8,14 +8,12 @@ interface IProps {
 const Background: React.FC<IProps> = ({ isSticky }) => {
   return (
     <Container isSticky={isSticky}>
-      <div>
-        <section>
-          <h1>Estamos te aguardando!</h1>
-          <span>
-            Sua <strong>locadora</strong> de veículos
-          </span>
-        </section>
-      </div>
+      <section>
+        <h1>Estamos te aguardando!</h1>
+        <span>
+          Sua <strong>locadora</strong> de veículos
+        </span>
+      </section>
     </Container>
   );
 };

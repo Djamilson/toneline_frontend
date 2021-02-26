@@ -48,6 +48,24 @@ export const Box = styled.div`
   }
 `;
 
+export const Item = styled.strong`
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    font-size: 22;
+  }
+  strong {
+    margin-left: 15px;
+    font-size: 16px;
+    color: ${colors.colorTitleInPrimary};
+  }
+  @media (min-width: 512px) {
+    display: flex;
+  }
+`;
+
 export const Content = styled.div`
   height: 40px;
   width: ${px2vw(-1)};

@@ -15,7 +15,7 @@ export const Container = styled.div`
 
   width: 100%;
   height: auto;
-  border: 0;
+  // border: 1px solid #f00;
 `;
 
 const appearImageRigth = keyframes`
