@@ -6,7 +6,7 @@ import logoCurso from '../../assets/images/logo.svg';
 import Footer from '../../components/Footer';
 import SubHeader from '../../components/Headers/Header';
 import Header from '../../components/Headers/SubHeader';
-import Mapp from '../../components/Map';
+import Map from '../../components/Map';
 import happyMapIcon from '../../components/Map/happMapIcon';
 import ScrollIndicator from '../../components/ScrollIndicator';
 import Background from '../../components/Section/Background';
@@ -77,7 +77,12 @@ const Home: React.FC = () => {
       <Person />
 
       <ContainerMap>
-        <Mapp style={{ width: '100%', height: 380, overflowX: 'hidden' }}>
+        <header>
+          <h2>Localização</h2>
+          <span>Mapa</span>
+        </header>
+
+        <Map style={{ width: '100%', height: 380, overflowX: 'hidden' }}>
           <TileLayer
             attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -88,7 +93,7 @@ const Home: React.FC = () => {
             icon={happyMapIcon}
             position={[-10.183906, -48.309326]}
           />
-        </Mapp>
+        </Map>
       </ContainerMap>
       <Footer />
     </Container>

@@ -122,9 +122,29 @@ export const ContainerMap = styled.div`
   justify-content: center;
   display: flex;
   align-items: center;
+  flex-direction: column;
   background: ${colors.colorButtonText};
   z-index: 1;
   width: 100%;
   height: 100vh;
   overflow-x: hidden;
+
+  header {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 40px;
+
+    color: ${colors.colorTextInWhite};
+
+    h2 {
+      font-size: 24px;
+    }
+
+    span {
+      font-size: 14px;
+      font-weight: normal;
+    }
+  }
 `;
