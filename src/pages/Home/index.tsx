@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { MdAccessible } from 'react-icons/md';
-import { Marker } from 'react-leaflet';
+import { TileLayer, Marker } from 'react-leaflet';
 
 import logoCurso from '../../assets/images/logo.svg';
 import Footer from '../../components/Footer';
 import SubHeader from '../../components/Headers/Header';
 import Header from '../../components/Headers/SubHeader';
-import Map from '../../components/Map';
+import Mapp from '../../components/Map';
 import happyMapIcon from '../../components/Map/happMapIcon';
 import ScrollIndicator from '../../components/ScrollIndicator';
 import Background from '../../components/Section/Background';
@@ -35,6 +35,7 @@ const Home: React.FC = () => {
       window.removeEventListener('scroll', handleScrollEvent);
     };
   }, [setSticky, sticky.offset]);
+
   return (
     <Container>
       <ScrollIndicator />
@@ -76,13 +77,18 @@ const Home: React.FC = () => {
       <Person />
 
       <ContainerMap>
-        <Map style={{ width: '100%', height: 380, overflowX: 'hidden' }}>
+        <Mapp style={{ width: '100%', height: 380, overflowX: 'hidden' }}>
+          <TileLayer
+            attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+
           <Marker
             interactive={false}
             icon={happyMapIcon}
             position={[-10.183906, -48.309326]}
           />
-        </Map>
+        </Mapp>
       </ContainerMap>
       <Footer />
     </Container>
