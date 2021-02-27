@@ -6,6 +6,7 @@ export const Container = styled.div`
   max-width: 60vw;
   justify-content: center;
   align-items: center;
+  border-radius: 5px;
 
   z-index: 1;
   overflow-x: hidden;

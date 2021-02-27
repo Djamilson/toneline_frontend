@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { MdAccessible } from 'react-icons/md';
-import { Marker } from 'react-leaflet';
+import { TileLayer, Marker } from 'react-leaflet';
 
 import logoCurso from '../../assets/images/logo.svg';
 import Footer from '../../components/Footer';
@@ -35,6 +35,7 @@ const Home: React.FC = () => {
       window.removeEventListener('scroll', handleScrollEvent);
     };
   }, [setSticky, sticky.offset]);
+
   return (
     <Container>
       <ScrollIndicator />
@@ -76,7 +77,17 @@ const Home: React.FC = () => {
       <Person />
 
       <ContainerMap>
+        <header>
+          <h2>Localização</h2>
+          <span>Mapa</span>
+        </header>
+
         <Map style={{ width: '100%', height: 380, overflowX: 'hidden' }}>
+          <TileLayer
+            attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+
           <Marker
             interactive={false}
             icon={happyMapIcon}
